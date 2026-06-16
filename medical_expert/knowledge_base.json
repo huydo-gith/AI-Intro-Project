@@ -1,0 +1,849 @@
+{
+    "FACTS": {
+        "fever": {
+            "label": "Sốt",
+            "category": "symptom",
+            "synonyms": [
+                "sot",
+                "sốt",
+                "fever",
+                "nong",
+                "nóng",
+                "nóng sốt"
+            ]
+        },
+        "cough": {
+            "label": "Ho",
+            "category": "symptom",
+            "synonyms": [
+                "ho",
+                "cough",
+                "ho khan",
+                "ho dấm"
+            ]
+        },
+        "sore_throat": {
+            "label": "Đau họng",
+            "category": "symptom",
+            "synonyms": [
+                "dau hong",
+                "đau họng",
+                "rat hong",
+                "rát họng",
+                "sore throat"
+            ]
+        },
+        "runny_nose": {
+            "label": "Sổ mũi",
+            "category": "symptom",
+            "synonyms": [
+                "so mui",
+                "sổ mũi",
+                "chay mui",
+                "chảy mũi",
+                "runny nose"
+            ]
+        },
+        "sneezing": {
+            "label": "Hắt hơi",
+            "category": "symptom",
+            "synonyms": [
+                "hat hoi",
+                "hắt hơi",
+                "sneezing"
+            ]
+        },
+        "body_ache": {
+            "label": "Đau mỏi người",
+            "category": "symptom",
+            "synonyms": [
+                "dau moi",
+                "đau mỏi",
+                "body ache",
+                "nhuc moi",
+                "nhức mỏi"
+            ]
+        },
+        "headache": {
+            "label": "Đau đầu",
+            "category": "symptom",
+            "synonyms": [
+                "dau dau",
+                "đau đầu",
+                "headache"
+            ]
+        },
+        "fatigue": {
+            "label": "Mệt mỏi",
+            "category": "symptom",
+            "synonyms": [
+                "met moi",
+                "mệt mỏi",
+                "fatigue",
+                "u oai",
+                "uể oải",
+                "mệt",
+                "hơi mệt"
+            ]
+        },
+        "loss_of_taste": {
+            "label": "Mất vị giác/khứu giác",
+            "category": "symptom",
+            "synonyms": [
+                "mat vi giac",
+                "mất vị giác",
+                "mat khu giac",
+                "mất khứu giác",
+                "loss of taste",
+                "loss of smell"
+            ]
+        },
+        "shortness_of_breath": {
+            "label": "Khó thở",
+            "category": "symptom",
+            "synonyms": [
+                "kho tho",
+                "khó thở",
+                "shortness of breath",
+                "breathless",
+                "tho ngan"
+            ]
+        },
+        "chest_pain": {
+            "label": "Đau tức ngực",
+            "category": "symptom",
+            "synonyms": [
+                "dau nguc",
+                "đau ngực",
+                "tuc nguc",
+                "tức ngực",
+                "chest pain"
+            ]
+        },
+        "nausea": {
+            "label": "Buồn nôn",
+            "category": "symptom",
+            "synonyms": [
+                "buon non",
+                "buồn nôn",
+                "nausea"
+            ]
+        },
+        "vomiting": {
+            "label": "Nôn",
+            "category": "symptom",
+            "synonyms": [
+                "non",
+                "nôn",
+                "vomit",
+                "vomiting"
+            ]
+        },
+        "diarrhea": {
+            "label": "Tiêu chảy",
+            "category": "symptom",
+            "synonyms": [
+                "tieu chay",
+                "tiêu chảy",
+                "diarrhea"
+            ]
+        },
+        "abdominal_pain": {
+            "label": "Đau bụng",
+            "category": "symptom",
+            "synonyms": [
+                "dau bung",
+                "đau bụng",
+                "abdominal pain",
+                "stomachache"
+            ]
+        },
+        "itchy_eyes": {
+            "label": "Ngứa mắt",
+            "category": "symptom",
+            "synonyms": [
+                "ngua mat",
+                "ngứa mắt",
+                "itchy eyes"
+            ]
+        },
+        "rash": {
+            "label": "Phát ban",
+            "category": "symptom",
+            "synonyms": [
+                "phat ban",
+                "phát ban",
+                "rash"
+            ]
+        },
+        "wheezing": {
+            "label": "Thở khò khè",
+            "category": "symptom",
+            "synonyms": [
+                "tho kho khe",
+                "thở khò khè",
+                "wheezing"
+            ]
+        },
+        "sputum": {
+            "label": "Chảy máu khi ho",
+            "category": "symptom",
+            "synonyms": [
+                "ho ra mau",
+                "ho máu",
+                "chay mau khi ho",
+                "hemoptysis"
+            ]
+        },
+        "nasal_congestion": {
+            "label": "Tắc mũi",
+            "category": "symptom",
+            "synonyms": [
+                "tac mui",
+                "tắc mũi",
+                "nasal congestion"
+            ]
+        },
+        "constipation": {
+            "label": "Táo bón",
+            "category": "symptom",
+            "synonyms": [
+                "tao bon",
+                "táo bón",
+                "constipation"
+            ]
+        },
+        "loss_of_appetite": {
+            "label": "Mất cảm giác thèm ăn",
+            "category": "symptom",
+            "synonyms": [
+                "mat cam giac them an",
+                "mất cảm giác thèm ăn",
+                "loss of appetite"
+            ]
+        },
+        "dizziness": {
+            "label": "Chóng mặt",
+            "category": "symptom",
+            "synonyms": [
+                "chong mat",
+                "chóng mặt",
+                "dizziness",
+                "vertigo"
+            ]
+        },
+        "muscle_pain": {
+            "label": "Đau cơ",
+            "category": "symptom",
+            "synonyms": [
+                "dau co",
+                "đau cơ",
+                "muscle pain",
+                "myalgia"
+            ]
+        },
+        "ear_pain": {
+            "label": "Đau tai",
+            "category": "symptom",
+            "synonyms": [
+                "dau tai",
+                "đau tai",
+                "ear pain",
+                "earache"
+            ]
+        },
+        "lymph_swelling": {
+            "label": "Sưng hạch",
+            "category": "symptom",
+            "synonyms": [
+                "suong hach",
+                "sưng hạch",
+                "lymph swelling"
+            ]
+        },
+        "high_fever": {
+            "label": "Sốt cao",
+            "category": "derived",
+            "synonyms": []
+        },
+        "respiratory_syndrome": {
+            "label": "Hội chứng hô hấp",
+            "category": "derived",
+            "synonyms": []
+        },
+        "upper_respiratory_pattern": {
+            "label": "Mẫu viêm đường hô hấp trên",
+            "category": "derived",
+            "synonyms": []
+        },
+        "lower_respiratory_pattern": {
+            "label": "Mẫu viêm đường hô hấp dưới",
+            "category": "derived",
+            "synonyms": []
+        },
+        "viral_pattern": {
+            "label": "Mẫu nhiễm virus",
+            "category": "derived",
+            "synonyms": []
+        },
+        "digestive_syndrome": {
+            "label": "Hội chứng tiêu hóa",
+            "category": "derived",
+            "synonyms": []
+        },
+        "allergy_pattern": {
+            "label": "Mẫu dị ứng",
+            "category": "derived",
+            "synonyms": []
+        },
+        "respiratory_alert": {
+            "label": "Cảnh báo hô hấp",
+            "category": "derived",
+            "synonyms": []
+        },
+        "severe_systemic": {
+            "label": "Biểu hiện toàn thân nặng",
+            "category": "derived",
+            "synonyms": []
+        },
+        "cardiac_alert": {
+            "label": "Cảnh báo tim mạch",
+            "category": "derived",
+            "synonyms": []
+        },
+        "influenza": {
+            "label": "Nghi cúm",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "common_cold": {
+            "label": "Nghi cảm lạnh",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "covid19_suspected": {
+            "label": "Nghi COVID-19",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "allergic_rhinitis": {
+            "label": "Nghi viêm mũi dị ứng",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "food_poisoning": {
+            "label": "Nghi rối loạn tiêu hóa / ngộ độc thực phẩm",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "measles_suspected": {
+            "label": "Nghi sởi hoặc bệnh phát ban do virus",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "urgent_medical_attention": {
+            "label": "Cần đi khám khẩn cấp",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "bronchitis": {
+            "label": "Nghi viêm phế quản",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "pneumonia": {
+            "label": "Nghi viêm phổi",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "asthma": {
+            "label": "Nghi hen suyễn",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "sinusitis": {
+            "label": "Nghi viêm xoang",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "otitis_media": {
+            "label": "Nghi viêm tai giữa",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "pharyngitis": {
+            "label": "Nghi viêm họng",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "gastroenteritis": {
+            "label": "Nghi viêm dạ dày - ruột",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "dengue_fever": {
+            "label": "Nghi sốt xuất huyết",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "angina": {
+            "label": "Nghi bệnh đột quỵ tim",
+            "category": "diagnosis",
+            "synonyms": []
+        }
+    },
+    "RULES": [
+        {
+            "id": "R1",
+            "antecedents": [
+                "fever"
+            ],
+            "consequent": "high_fever",
+            "explanation": "Có sốt, hệ thống kích hoạt trạng thái sốt để hỗ trợ các luật bệnh virus.",
+            "confidence": 90.0
+        },
+        {
+            "id": "R2",
+            "antecedents": [
+                "cough",
+                "sore_throat"
+            ],
+            "consequent": "respiratory_syndrome",
+            "explanation": "Ho và đau họng tạo thành mẫu triệu chứng hô hấp ban đầu.",
+            "confidence": 75.0
+        },
+        {
+            "id": "R3",
+            "antecedents": [
+                "runny_nose",
+                "sneezing"
+            ],
+            "consequent": "upper_respiratory_pattern",
+            "explanation": "Sổ mũi và hắt hơi tạo thành mẫu đường hô hấp trên.",
+            "confidence": 80.0
+        },
+        {
+            "id": "R4",
+            "antecedents": [
+                "fever",
+                "body_ache",
+                "fatigue"
+            ],
+            "consequent": "viral_pattern",
+            "explanation": "Sốt, đau mỏi người và mệt mỏi là một cụm dấu hiệu nhiễm virus.",
+            "confidence": 85.0
+        },
+        {
+            "id": "R5",
+            "antecedents": [
+                "nausea",
+                "vomiting"
+            ],
+            "consequent": "digestive_syndrome",
+            "explanation": "Buồn nôn và nôn gợi ý hội chứng tiêu hóa.",
+            "confidence": 78.0
+        },
+        {
+            "id": "R6",
+            "antecedents": [
+                "diarrhea",
+                "abdominal_pain"
+            ],
+            "consequent": "digestive_syndrome",
+            "explanation": "Tiêu chảy kèm đau bụng củng cố mẫu rối loạn tiêu hóa.",
+            "confidence": 82.0
+        },
+        {
+            "id": "R7",
+            "antecedents": [
+                "runny_nose",
+                "itchy_eyes",
+                "sneezing"
+            ],
+            "consequent": "allergy_pattern",
+            "explanation": "Sổ mũi, ngứa mắt và hắt hơi phù hợp với mẫu dị ứng.",
+            "confidence": 88.0
+        },
+        {
+            "id": "R8",
+            "antecedents": [
+                "shortness_of_breath",
+                "chest_pain"
+            ],
+            "consequent": "respiratory_alert",
+            "explanation": "Khó thở kèm đau tức ngực là dấu hiệu cảnh báo cần ưu tiên xử trí.",
+            "confidence": 92.0
+        },
+        {
+            "id": "R8b",
+            "antecedents": [
+                "shortness_of_breath"
+            ],
+            "consequent": "respiratory_alert",
+            "explanation": "Khó thở là dấu hiệu cảnh báo hô hấp.",
+            "confidence": 85.0
+        },
+
+        {
+            "id": "R9",
+            "antecedents": ["cough", "wheezing"],
+            "consequent": "lower_respiratory_pattern",
+            "explanation": "Ho kèm thở khò khè cho thấy tổn thương đường hô hấp dưới.",
+            "confidence": 80.0
+        },
+        
+        {
+            "id": "R10",
+            "antecedents": [
+                "cough",
+                "sputum"
+            ],
+            "consequent": "lower_respiratory_pattern",
+            "explanation": "Ho ra máu là dấu hiệu hô hấp dưới nặng.",
+            "confidence": 88.0
+        },
+        {
+            "id": "R11",
+            "antecedents": [
+                "nasal_congestion",
+                "headache"
+            ],
+            "consequent": "upper_respiratory_pattern",
+            "explanation": "Tắc mũi kèm đau đầu gợi ý viêm xoang hoặc cảm cúm.",
+            "confidence": 75.0
+        },
+        {
+            "id": "R12",
+            "antecedents": [
+                "fever",
+                "ear_pain"
+            ],
+            "consequent": "otitis_media",
+            "explanation": "Sốt kèm đau tai gợi ý viêm tai giữa.",
+            "confidence": 70.0
+        },
+        {
+            "id": "R13",
+            "antecedents": [
+                "viral_pattern",
+                "respiratory_syndrome"
+            ],
+            "consequent": "influenza",
+            "explanation": "Mẫu virus kết hợp hội chứng hô hấp hướng tới cúm.",
+            "confidence": 82.0
+        },
+        {
+            "id": "R14",
+            "antecedents": [
+                "upper_respiratory_pattern",
+                "sore_throat"
+            ],
+            "consequent": "common_cold",
+            "explanation": "Đường hô hấp trên kèm đau họng phù hợp với cảm lạnh.",
+            "confidence": 75.0
+        },
+        {
+            "id": "R15",
+            "antecedents": [
+                "respiratory_syndrome",
+                "loss_of_taste"
+            ],
+            "consequent": "covid19_suspected",
+            "explanation": "Triệu chứng hô hấp cùng mất vị giác hoặc khứu giác gợi ý COVID-19.",
+            "confidence": 88.0
+        },
+        {
+            "id": "R16",
+            "antecedents": [
+                "fever",
+                "rash",
+                "body_ache"
+            ],
+            "consequent": "severe_systemic",
+            "explanation": "Sốt cao, phát ban và đau mỏi gợi ý bệnh đáng nguy hiểm.",
+            "confidence": 85.0
+        },
+        {
+            "id": "R17",
+            "antecedents": [
+                "fever",
+                "lymph_swelling"
+            ],
+            "consequent": "viral_pattern",
+            "explanation": "Sốt kèm sưng hạch là dấu hiệu infection virus.",
+            "confidence": 80.0
+        },
+        {
+            "id": "R18",
+            "antecedents": [
+                "allergy_pattern"
+            ],
+            "consequent": "allergic_rhinitis",
+            "explanation": "Mẫu dị ứng dẫn tới nghi ngờ viêm mũi dị ứng.",
+            "confidence": 80.0
+        },
+        {
+            "id": "R19",
+            "antecedents": [
+                "rash",
+                "itchy_eyes"
+            ],
+            "consequent": "allergy_pattern",
+            "explanation": "Phát ban và ngứa mắt gợi ý dị ứng da hoặc toàn thân.",
+            "confidence": 75.0
+        },
+        {
+            "id": "R20",
+            "antecedents": [
+                "digestive_syndrome",
+                "fever"
+            ],
+            "consequent": "gastroenteritis",
+            "explanation": "Hội chứng tiêu hóa có sốt gợi ý viêm dạ dày ruột.",
+            "confidence": 80.0
+        },
+        {
+            "id": "R21",
+            "antecedents": [
+                "diarrhea",
+                "vomiting",
+                "abdominal_pain"
+            ],
+            "consequent": "food_poisoning",
+            "explanation": "Tiêu chảy, nôn và đau bụng là triệu chứng ngộ độc thực phẩm.",
+            "confidence": 82.0
+        },
+        {
+            "id": "R22",
+            "antecedents": [
+                "loss_of_appetite",
+                "abdominal_pain"
+            ],
+            "consequent": "digestive_syndrome",
+            "explanation": "Mất thèm ăn kèm đau bụng gợi ý vấn đề tiêu hóa.",
+            "confidence": 70.0
+        },
+        {
+            "id": "R23",
+            "antecedents": [
+                "respiratory_syndrome",
+                "cough",
+                "wheezing"
+            ],
+            "consequent": "asthma",
+            "explanation": "Ho kèm thở khò khè gợi ý hen suyễn.",
+            "confidence": 78.0
+        },
+        {
+            "id": "R24",
+            "antecedents": [
+                "lower_respiratory_pattern",
+                "fever"
+            ],
+            "consequent": "bronchitis",
+            "explanation": "Tổn thương đường hô hấp dưới có sốt gợi ý viêm phế quản.",
+            "confidence": 76.0
+        },
+        {
+            "id": "R25",
+            "antecedents": [
+                "lower_respiratory_pattern",
+                "shortness_of_breath",
+                "fever"
+            ],
+            "consequent": "pneumonia",
+            "explanation": "Tổn thương hô hấp dưới, khó thở và sốt cao gợi ý viêm phổi.",
+            "confidence": 85.0
+        },
+        {
+            "id": "R26",
+            "antecedents": [
+                "upper_respiratory_pattern",
+                "sore_throat",
+                "nasal_congestion"
+            ],
+            "consequent": "sinusitis",
+            "explanation": "Triệu chứng đường hô hấp trên kèm tắc mũi gợi ý viêm xoang.",
+            "confidence": 73.0
+        },
+        {
+            "id": "R27",
+            "antecedents": [
+                "sore_throat",
+                "fever",
+                "lymph_swelling"
+            ],
+            "consequent": "pharyngitis",
+            "explanation": "Đau họng, sốt và sưng hạch gợi ý viêm họng.",
+            "confidence": 80.0
+        },
+        {
+            "id": "R28",
+            "antecedents": [
+                "fever",
+                "headache",
+                "muscle_pain",
+                "rash"
+            ],
+            "consequent": "dengue_fever",
+            "explanation": "Sốt cao, đau đầu, đau cơ và phát ban gợi ý sốt xuất huyết.",
+            "confidence": 82.0
+        },
+        {
+            "id": "R29",
+            "antecedents": [
+                "fever",
+                "rash"
+            ],
+            "consequent": "measles_suspected",
+            "explanation": "Sốt đi cùng phát ban gợi ý bệnh phát ban do virus như sởi.",
+            "confidence": 76.0
+        },
+        {
+            "id": "R30",
+            "antecedents": [
+                "chest_pain",
+                "shortness_of_breath"
+            ],
+            "consequent": "cardiac_alert",
+            "explanation": "Đau ngực kèm khó thở là dấu hiệu cảnh báo tim mạch.",
+            "confidence": 90.0
+        },
+        {
+            "id": "R31",
+            "antecedents": [
+                "chest_pain",
+                "dizziness"
+            ],
+            "consequent": "cardiac_alert",
+            "explanation": "Đau ngực kèm chóng mặt gợi ý vấn đề tim mạch.",
+            "confidence": 85.0
+        },
+        {
+            "id": "R32",
+            "antecedents": [
+                "cardiac_alert"
+            ],
+            "consequent": "angina",
+            "explanation": "Dấu hiệu cảnh báo tim mạch gợi ý bệnh đột quỵ tim.",
+            "confidence": 75.0
+        },
+        {
+            "id": "R33",
+            "antecedents": [
+                "respiratory_alert"
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "Khi có cảnh báo hô hấp, hệ thống kết luận cần khám khẩn cấp.",
+            "confidence": 95.0
+        },
+        {
+            "id": "R34",
+            "antecedents": [
+                "cardiac_alert"
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "Cảnh báo tim mạch yêu cầu khám khẩn cấp.",
+            "confidence": 98.0
+        },
+        {
+            "id": "R35",
+            "antecedents": [
+                "covid19_suspected",
+                "shortness_of_breath"
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "Nghi COVID-19 kèm khó thở làm tăng mức độ nguy cơ.",
+            "confidence": 92.0
+        },
+        {
+            "id": "R36",
+            "antecedents": [
+                "severe_systemic"
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "Biểu hiện toàn thân nặng cần khám khẩn cấp.",
+            "confidence": 93.0
+        }
+    ],
+    "DIAGNOSIS_METADATA": {
+        "influenza": {
+            "priority": "medium",
+            "advice": "Bạn cần nên nghỉ ngơi, uống đủ nước, theo dõi sốt và đi khám nếu triệu chứng nặng thêm."
+        },
+        "common_cold": {
+            "priority": "low",
+            "advice": "Bạn cần tiếp tục theo dõi triệu chứng, nghỉ ngơi, giữ ấm và bổ sung nước."
+        },
+        "covid19_suspected": {
+            "priority": "high",
+            "advice": "Nên test, hạn chế tiếp xúc, theo dõi SpO2 và đi khám nếu khó thở hoặc sốt kéo dài."
+        },
+        "allergic_rhinitis": {
+            "priority": "low",
+            "advice": "Tránh tác nhân dị ứng, theo dõi và cân nhắc khám chuyên khoa nếu tái phát nhiều."
+        },
+        "food_poisoning": {
+            "priority": "medium",
+            "advice": "Bù nước, theo dõi mất nước và đi khám nếu nôn nhiều, sốt cao hoặc tiêu chảy kéo dài."
+        },
+        "measles_suspected": {
+            "priority": "high",
+            "advice": "Cần khám để đánh giá nguyên nhân phát ban, đặc biệt khi sốt cao hoặc mệt nhiều."
+        },
+        "urgent_medical_attention": {
+            "priority": "high",
+            "advice": "Có dấu hiệu cảnh báo. Nên đến cơ sở y tế hoặc gọi hỗ trợ y tế ngay."
+        },
+        "bronchitis": {
+            "priority": "medium",
+            "advice": "Cần khám chuyên khoa hô hấp. Tránh khói, hít nước nóng và theo dõi sốt."
+        },
+        "pneumonia": {
+            "priority": "high",
+            "advice": "Cần đi khám sớm hoặc vào viện. Viêm phổi là bệnh lý nặng cần điều trị kháng sinh."
+        },
+        "asthma": {
+            "priority": "medium",
+            "advice": "Nên khám bác sĩ hô hấp. Tránh tác nhân kích thích, dùng inhaler nếu có."
+        },
+        "sinusitis": {
+            "priority": "low",
+            "advice": "Xông hơi mũi, hít nước nóng và khám nếu triệu chứng kéo dài hơn 2 tuần."
+        },
+        "otitis_media": {
+            "priority": "medium",
+            "advice": "Cần khám tai mũi họng. Đừng nhỏ nước vào tai, dùng pain reliever."
+        },
+        "pharyngitis": {
+            "priority": "medium",
+            "advice": "Uống nước ấm, dùng lozenges, và khám để xác định nguyên nhân virus hay vi khuẩn."
+        },
+        "gastroenteritis": {
+            "priority": "medium",
+            "advice": "Bù nước từng chút, ăn nhạt, tránh sữa và đi khám nếu mất nước hoặc sốt cao."
+        },
+        "dengue_fever": {
+            "priority": "high",
+            "advice": "Sốt xuất huyết cần khám ngay. Uống nước, kiểm tra tiểu cầu và theo dõi sốt."
+        },
+        "angina": {
+            "priority": "high",
+            "advice": "ĐỘC LẬP. Đây là cảnh báo tim mạch. Gọi xe cấp cứu hoặc đi viện ngay lập tức."
+        }
+    },
+    "QUICK_FACT_KEYS": [
+        "fever",
+        "cough",
+        "sore_throat",
+        "runny_nose",
+        "body_ache",
+        "fatigue",
+        "loss_of_taste",
+        "shortness_of_breath",
+        "diarrhea",
+        "abdominal_pain",
+        "chest_pain",
+        "nausea"
+    ]
+}

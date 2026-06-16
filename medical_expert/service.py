@@ -7,7 +7,9 @@ from medical_expert.inference_engine import ForwardChainingEngine
 from medical_expert.knowledge_base import FACTS, QUICK_FACT_KEYS, RULES
 
 
-engine = ForwardChainingEngine(RULES)
+
+# Initialize engine with conflict resolution
+engine = ForwardChainingEngine(RULES, conflict_strategy="highest_confidence")
 
 
 def normalize_text(value: str) -> str:
@@ -51,24 +53,27 @@ def analyze_symptoms(user_facts: list[str], message: str = "") -> dict:
     elif message:
         bot_messages.append(
             "Tôi chưa nhận diện được triệu chứng rõ ràng từ câu vừa rồi. "
-            "Bạn có thể nhập theo mẫu như: 'sốt, ho, đau họng'."
+            "Bạn có thể nhập theo mẫu như: 'Tôi bị sốt, ho, đau họng'."
         )
 
     if result["diagnoses"]:
-        diagnosis_lines = [
-            f'{diagnosis["label"]}: {diagnosis["advice"]}'
-            for diagnosis in result["diagnoses"][:3]
-        ]
+        diagnosis_lines = []
+        for diagnosis in result["diagnoses"][:3]:
+            confidence_pct = diagnosis.get("confidence", 0)
+            confidence_bar = _confidence_bar(confidence_pct)
+            diagnosis_lines.append(
+                f'{diagnosis["label"]} ({confidence_pct:.0f}%) {confidence_bar}: {diagnosis["advice"]}'
+            )
         bot_messages.append("Kết luận tạm thời:\n" + "\n".join(diagnosis_lines))
     else:
-        bot_messages.append("Hiện chưa đủ dữ kiện để kết luận. Tôi sẽ hỏi thêm để hoàn thiện bộ nhớ làm việc.")
+        bot_messages.append("Hiện tại chưa đủ dữ kiện để kết luận.")
 
     if next_facts:
         question = ", ".join(FACTS[fact]["label"].lower() for fact in next_facts)
-        bot_messages.append(f"Bạn có thêm các dấu hiệu sau không: {question}?")
+        bot_messages.append(f"Để chẩn đoán chính xác hơn, bạn có thêm các dấu hiệu sau không: {question}?")
 
     if any(item["key"] == "urgent_medical_attention" for item in result["diagnoses"]):
-        bot_messages.append("Hệ thống phát hiện dấu hiệu cảnh báo. Bạn nên liên hệ cơ sở y tế sớm.")
+        bot_messages.append("HỆ THỐNG PHÁT HIỆN DẤU HIỆU CẢnh báo. BẠN NÊN LIÊN HỆ CƠ SỞ Y TẾ SỚM.")
 
     return {
         "recognizedFacts": extracted_facts,
@@ -79,3 +84,20 @@ def analyze_symptoms(user_facts: list[str], message: str = "") -> dict:
         "botMessages": bot_messages,
         "quickFacts": QUICK_FACT_KEYS,
     }
+
+
+def _confidence_bar(confidence: float) -> str:
+    """Create a visual confidence bar."""
+    filled = int(confidence / 10)
+    empty = 10 - filled
+    return "█" * filled + "░" * empty
+
+
+def explain_diagnosis_detail(diagnosis_key: str, trace: list[dict]) -> dict:
+    """Get detailed explanation for a specific diagnosis."""
+    return engine.explain_diagnosis(diagnosis_key, trace)
+
+
+def get_rule_explanation(rule_id: str, trace: list[dict], diagnoses: list[dict]) -> dict:
+    """Get detailed explanation for a specific rule."""
+    return engine.enhance_explanation(rule_id, trace, diagnoses)

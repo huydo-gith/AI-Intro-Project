@@ -1,88 +1,143 @@
-# Medical Expert Chatbot Python
+# MedExpert Chatbot: Hệ Chuyên Gia Hỗ Trợ Chẩn Đoán Y Tế Sinh Luật (Rule-Based Expert System)
 
-Demo web app cho bài toán chatbot hỗ trợ chẩn đoán y tế dựa trên hệ chuyên gia sinh luật, với phần suy diễn viết bằng Python.
+Ứng dụng web demo mô phỏng một **Hệ chuyên gia hỗ trợ chẩn đoán y tế dựa trên luật (Rule-Based Expert System)** phục vụ học tập môn học **Nhập môn Trí tuệ nhân tạo (IT3160 - HUST)**. Dự án kết hợp bộ suy diễn logic mệnh đề viết bằng Python ở backend và giao diện tương tác hiện đại ở frontend.
 
-## Mục tiêu
+---
 
-Project mô phỏng đúng các thành phần cốt lõi của một rule-based expert system:
+## 🌟 Các Thành Phần Cốt Lõi Của Hệ Chuyên Gia
 
-- `Knowledge Base`: tập facts và rules y tế.
-- `Working Memory`: nơi lưu các triệu chứng người dùng đã cung cấp và các kết luận suy ra.
-- `Inference Engine`: áp dụng `Forward Chaining` trên các luật dạng Horn.
-- `User Interface`: giao diện chat để nhập triệu chứng và xem kết luận cùng vết suy diễn.
+Hệ thống được thiết kế và mô phỏng chuẩn xác theo kiến trúc của một hệ chuyên gia truyền thống:
 
-Hệ thống này phục vụ mục đích học tập cho các nội dung:
+1. **Cơ sở tri thức (Knowledge Base - KB):**
+   * Được lưu trữ dưới dạng cấu trúc trong file [knowledge_base.json](file:///d:/T%C3%80I%20LI%E1%BB%86U%20M%C3%94N%20H%E1%BB%8CC%20HUST/Ky%202025.2/Nhap%20mon%20tri%20tue%20nhan%20tao/IT3160%20Project%20-%20Copy%20%282%29/medical_expert/knowledge_base.json).
+   * **Sự kiện (`FACTS`):** Gồm triệu chứng (`symptom`), sự kiện dẫn xuất (`derived`), và kết luận chẩn đoán (`diagnosis`).
+   * **Luật (`RULES`):** Định dạng luật Horn `IF antecedents THEN consequent` có gắn trọng số độ tin cậy (`confidence`) và giải thích y tế (`explanation`).
+   * **Siêu dữ liệu chẩn đoán (`DIAGNOSIS_METADATA`):** Chứa mức độ ưu tiên cảnh báo (`priority`: high, medium, low) và lời khuyên y học (`advice`).
 
-- Biểu diễn tri thức bằng mệnh đề và luật.
-- Suy diễn trên luật `IF antecedents THEN consequent`.
-- Cơ chế suy diễn tiến từ fact ban đầu tới kết luận cuối.
-- Giải thích được vì sao hệ thống kết luận ra một chẩn đoán.
+2. **Bộ nhớ làm việc (Working Memory):**
+   * Lưu trữ trạng thái hiện tại của phiên hội thoại bao gồm: Các triệu chứng do người dùng cung cấp và các sự kiện được suy diễn ra trong quá trình chạy, kèm theo độ tin cậy được cập nhật liên tục.
 
-## Cấu trúc
+3. **Động cơ suy diễn (Inference Engine):**
+   * Triển khai giải thuật **Suy diễn tiến (Forward Chaining)** tại [inference_engine.py](file:///d:/T%C3%80I%20LI%E1%BB%86U%20M%C3%94N%20H%E1%BB%8CC%20HUST/Ky%202025.2/Nhap%20mon%20tri%20tue%20nhan%20tao/IT3160%20Project%20-%20Copy%20%282%29/medical_expert/inference_engine.py). Duyệt qua tập luật để sinh ra tri thức mới cho tới khi đạt trạng thái hội tụ (không sinh thêm được sự kiện mới).
 
-- [index.html](./index.html): giao diện chính.
-- [styles.css](./styles.css): giao diện chatbot và bảng giải thích.
-- [app.py](./app.py): HTTP server Python và API `/api/analyze`.
-- [medical_expert/knowledge_base.py](./medical_expert/knowledge_base.py): facts, rules, metadata chẩn đoán.
-- [medical_expert/inference_engine.py](./medical_expert/inference_engine.py): bộ suy diễn tiến.
-- [medical_expert/service.py](./medical_expert/service.py): xử lý hội thoại và nhận diện triệu chứng.
-- [src/app.js](./src/app.js): frontend gọi API Python và render kết quả.
+4. **Giao diện người dùng (User Interface):**
+   * Giao diện web single-page chia thành 2 tab chính: **Tư vấn chẩn đoán** và **Quản lý tri thức**, được tối ưu hóa trải nghiệm người dùng với CSS hiện đại, trực quan hóa dữ liệu động.
 
-## Cách biểu diễn tri thức
+---
 
-Mỗi triệu chứng hay kết luận được biểu diễn thành một mệnh đề:
+## 🚀 Các Tính Năng Nổi Bật Được Tinh Chỉnh
 
-- `fever`
-- `cough`
-- `respiratory_syndrome`
-- `covid19_suspected`
+* **Tính toán độ tin cậy (Confidence Propagation):**
+  * Áp dụng công thức lan truyền độ tin cậy khi kích hoạt luật:
+    $$\text{confidence}_{\text{derived}} = \min(\{\text{confidence}_{\text{antecedents}}\}) \times \frac{\text{confidence}_{\text{rule}}}{100}$$
+  * Giúp hệ thống không chỉ đưa ra kết luận nhị phân đúng/sai mà còn định lượng được mức độ tin cậy của từng chẩn đoán.
+* **Giải thích vết suy diễn (Explanation Mechanism):**
+  * Hiển thị trực quan luồng suy luận (Trace Flow) dạng cây liên kết các luật đã kích hoạt từ triệu chứng ban đầu đến kết luận bệnh lý cuối cùng.
+  * Giải thích chi tiết cơ sở khoa học y tế đằng sau mỗi bước suy luận để tăng tính minh bạch của hệ chuyên gia (hộp đen logic được mở ra rõ ràng).
+* **Gợi ý câu hỏi thông minh (Smart Question Selection):**
+  * Sử dụng nguyên lý **Suy diễn lùi (Backward Chaining)** để quét ngược từ các bệnh lý có độ ưu tiên cao hoặc các luật gần thỏa mãn để tìm ra các triệu chứng còn thiếu (`suggest_next_facts`).
+  * Đưa ra câu hỏi định hướng cho người dùng ("Bạn có thêm các dấu hiệu sau không...?") để thu thập thêm dữ kiện, giúp nâng cao độ chính xác của chẩn đoán.
+* **Nhận diện ngôn ngữ tự nhiên cơ bản (NLP Parsing):**
+  * Sử dụng cơ chế normalize tiếng Việt (xóa dấu, chuẩn hóa chữ thường) và đối khớp từ đồng nghĩa (`synonyms`) được cấu hình sẵn trong KB. Người dùng có thể chat câu tự nhiên ("tôi bị sot, ho khan va dau hong"), hệ thống tự động trích xuất chính xác các mã triệu chứng tương ứng.
+* **Trang quản trị tri thức (Knowledge Base Editor) toàn diện:**
+  * Cho phép người dùng trực tiếp Thêm, Sửa, Xóa các **Luật** và **Sự kiện** ngay trên giao diện web mà không cần can thiệp vào mã nguồn.
+  * Tích hợp cơ chế kiểm tra tính nhất quán (Validation) chặt chẽ ở backend: Phát hiện trùng lặp khóa, kiểm tra các sự kiện chưa định nghĩa, ngăn chặn xóa sự kiện đang được sử dụng trong các luật khác.
+  * Cơ chế nạp nóng (Hot-reload) ghi trực tiếp vào JSON và đồng bộ ngay lập tức vào bộ nhớ của Python server đang chạy mà không cần khởi động lại.
 
-Luật có dạng:
+---
+
+## 📁 Cấu Trúc Thư Mục Dự Án
 
 ```text
-R11: respiratory_syndrome ∧ loss_of_taste -> covid19_suspected
-R15: respiratory_alert -> urgent_medical_attention
+├── medical_expert/
+│   ├── __init__.py
+│   ├── knowledge_base.json      # Cơ sở dữ liệu tri thức (Facts, Rules, Metadata)
+│   ├── knowledge_base.py        # Module quản lý việc đọc/ghi và hot-reload KB
+│   ├── inference_engine.py      # Động cơ suy diễn tiến, tính độ tin cậy và giải thích vết
+│   └── service.py               # Xử lý hội thoại, trích xuất triệu chứng tự nhiên và tích hợp engine
+├── src/
+│   └── app.js                   # Logic giao diện frontend (gọi API, render chat, render trace, quản lý tab)
+├── index.html                   # Khung giao diện HTML5 của ứng dụng
+├── styles.css                   # Định dạng giao diện hiện đại (glassmorphism, color palette sang trọng)
+├── app.py                       # HTTP server Python thuần túy, cung cấp các endpoint API RESTful
+└── README.md                    # Tài liệu hướng dẫn dự án (file này)
 ```
 
-Đây là mô hình phù hợp với logic mệnh đề và forward chaining vì:
+---
 
-- antecedents là tập fact cần thỏa.
-- consequent là fact mới được thêm vào working memory.
-- quá trình lặp tiếp tục cho tới khi không còn luật nào kích hoạt thêm được.
+## 🛠️ Hướng Dẫn Cài Đặt và Khởi Chạy
 
-## Luồng suy diễn
+Dự án chỉ sử dụng các thư viện chuẩn của Python (`standard libraries`) để đảm bảo tính gọn nhẹ, không yêu cầu cài đặt thêm thư viện ngoài (như Flask hay FastAPI).
 
-1. Người dùng nhập triệu chứng qua chat hoặc bấm symptom chip.
-2. Hệ thống ánh xạ câu tự nhiên sang facts.
-3. Các facts ban đầu được đưa vào `working memory`.
-4. `ForwardChainingEngine` duyệt toàn bộ rule base.
-5. Nếu toàn bộ antecedents của một luật đều đúng, consequent được thêm vào bộ nhớ.
-6. Hệ thống lưu lại `trace` để giải thích các luật đã kích hoạt.
-7. Khi xuất hiện fact loại `diagnosis`, chatbot trả về kết luận tạm thời và khuyến nghị.
-
-## Chạy project bằng Python
-
+### Bước 1: Khởi động backend Python
+Mở terminal tại thư mục gốc của dự án và chạy lệnh:
 ```powershell
 python app.py
 ```
+Hệ thống sẽ khởi chạy HTTP Server đa luồng tại địa chỉ `http://127.0.0.1:8000`.
 
-Sau đó mở `http://127.0.0.1:8000`.
+### Bước 2: Truy cập ứng dụng
+Mở trình duyệt web và truy cập địa chỉ:
+```text
+http://127.0.0.1:8000
+```
+> [!IMPORTANT]  
+> Hãy chắc chắn truy cập qua địa chỉ `http://127.0.0.1:8000` thay vì mở trực tiếp file `index.html` trong trình duyệt để tránh lỗi chặn CORS khi gọi API.
 
-## Mở rộng tiếp theo
+---
 
-- Bổ sung nhiều luật và nhiều bệnh hơn từ tri thức chuyên gia.
-- Thêm độ tin cậy hoặc certainty factor.
-- Tách tầng `question selection` để chatbot hỏi triệu chứng tiếp theo thông minh hơn.
-- Lưu session hội thoại.
-- Kết nối backend để quản lý rule base bằng JSON hoặc database.
+## 🧪 Quy Trình Hoạt Động Chi Tiết
 
-## Lưu ý học thuật
+```mermaid
+graph TD
+    A[Người dùng nhập triệu chứng tự nhiên / bấm nút nhanh] --> B[Backend chuẩn hóa tiếng Việt & trích xuất mã triệu chứng bằng Synonyms]
+    B --> C[Đưa các triệu chứng ban đầu vào Working Memory với độ tin cậy 100%]
+    C --> D[Inference Engine thực hiện vòng lặp Forward Chaining]
+    D --> E{Kiểm tra tập Rules xem có luật nào đủ Antecedents?}
+    E -- Có --> F[Kích hoạt luật: Tính độ tin cậy cho Consequent mới & Thêm vào Working Memory & Lưu vết suy luận]
+    F --> D
+    E -- Không --> G[Sắp xếp các Diagnosis dựa trên cảnh báo Priority và Confidence]
+    G --> H[Engine gợi ý các triệu chứng còn thiếu bằng thuật toán hỏi thông minh]
+    H --> I[Kết quả trả về UI: Hiển thị chat, Working Memory pills, Diagnosis cards, Trace Flow]
+```
 
-Project được xây theo tinh thần của mô hình hệ chuyên gia y tế rule-based trong các tài liệu bạn cung cấp:
+---
 
-- tri thức được tổ chức thành facts và rules,
-- suy diễn theo luật tiến,
-- có bộ nhớ làm việc,
-- có thể giải thích chuỗi suy luận.
+## 📖 Ví Dụ Biểu Diễn Tri Thức
 
-Nó không phải hệ thống chẩn đoán lâm sàng thực tế và không nên dùng thay thế tư vấn y khoa chuyên môn.
+### 1. Cách định nghĩa Luật (Rules) trong JSON:
+```json
+{
+    "id": "R15",
+    "antecedents": [
+        "respiratory_syndrome",
+        "loss_of_taste"
+    ],
+    "consequent": "covid19_suspected",
+    "explanation": "Triệu chứng hô hấp cùng mất vị giác hoặc khứu giác gợi ý nhiễm COVID-19.",
+    "confidence": 88.0
+}
+```
+
+### 2. Cách định nghĩa Sự kiện (Facts) trong JSON:
+```json
+{
+    "loss_of_taste": {
+        "label": "Mất vị giác/khứu giác",
+        "category": "symptom",
+        "synonyms": [
+            "mat vi giac",
+            "mất vị giác",
+            "mat khu giac",
+            "mất khứu giác",
+            "loss of taste"
+        ]
+    }
+}
+```
+
+---
+
+## ⚠️ Lưu Ý Học Thuật
+
+Hệ chuyên gia này được xây dựng trên nền tảng cơ sở tri thức y học thu gọn phục vụ cho mục đích nghiên cứu học thuật về **Hệ thống dựa trên luật (Rule-Based Systems)** và **Cơ chế suy diễn logic**. Các chẩn đoán và lời khuyên do chatbot đưa ra hoàn toàn mang tính chất tham khảo và mô phỏng minh họa học tập, **không có giá trị thay thế cho chẩn đoán y khoa chuyên nghiệp từ bác sĩ**.
