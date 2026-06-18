@@ -1,56 +1,13 @@
 {
     "FACTS": {
-        "fever": {
-            "label": "Sốt",
+        "abdominal_pain": {
+            "label": "Đau bụng",
             "category": "symptom",
             "synonyms": [
-                "sot",
-                "sốt",
-                "fever",
-                "nong",
-                "nóng",
-                "nóng sốt"
-            ]
-        },
-        "cough": {
-            "label": "Ho",
-            "category": "symptom",
-            "synonyms": [
-                "ho",
-                "cough",
-                "ho khan",
-                "ho dấm"
-            ]
-        },
-        "sore_throat": {
-            "label": "Đau họng",
-            "category": "symptom",
-            "synonyms": [
-                "dau hong",
-                "đau họng",
-                "rat hong",
-                "rát họng",
-                "sore throat"
-            ]
-        },
-        "runny_nose": {
-            "label": "Sổ mũi",
-            "category": "symptom",
-            "synonyms": [
-                "so mui",
-                "sổ mũi",
-                "chay mui",
-                "chảy mũi",
-                "runny nose"
-            ]
-        },
-        "sneezing": {
-            "label": "Hắt hơi",
-            "category": "symptom",
-            "synonyms": [
-                "hat hoi",
-                "hắt hơi",
-                "sneezing"
+                "dau bung",
+                "đau bụng",
+                "abdominal pain",
+                "stomachache"
             ]
         },
         "body_ache": {
@@ -64,13 +21,63 @@
                 "nhức mỏi"
             ]
         },
-        "headache": {
-            "label": "Đau đầu",
+        "chest_pain": {
+            "label": "Đau tức ngực",
             "category": "symptom",
             "synonyms": [
-                "dau dau",
-                "đau đầu",
-                "headache"
+                "dau nguc",
+                "đau ngực",
+                "tuc nguc",
+                "tức ngực",
+                "chest pain"
+            ]
+        },
+        "constipation": {
+            "label": "Táo bón",
+            "category": "symptom",
+            "synonyms": [
+                "tao bon",
+                "táo bón",
+                "constipation"
+            ]
+        },
+        "cough": {
+            "label": "Ho",
+            "category": "symptom",
+            "synonyms": [
+                "ho",
+                "cough",
+                "ho khan",
+                "ho dấm"
+            ]
+        },
+        "diarrhea": {
+            "label": "Tiêu chảy",
+            "category": "symptom",
+            "synonyms": [
+                "tieu chay",
+                "tiêu chảy",
+                "diarrhea"
+            ]
+        },
+        "dizziness": {
+            "label": "Chóng mặt",
+            "category": "symptom",
+            "synonyms": [
+                "chong mat",
+                "chóng mặt",
+                "dizziness",
+                "vertigo"
+            ]
+        },
+        "ear_pain": {
+            "label": "Đau tai",
+            "category": "symptom",
+            "synonyms": [
+                "dau tai",
+                "đau tai",
+                "ear pain",
+                "earache"
             ]
         },
         "fatigue": {
@@ -86,6 +93,45 @@
                 "hơi mệt"
             ]
         },
+        "fever": {
+            "label": "Sốt",
+            "category": "symptom",
+            "synonyms": [
+                "sot",
+                "sốt",
+                "fever",
+                "nong",
+                "nóng",
+                "nóng sốt"
+            ]
+        },
+        "headache": {
+            "label": "Đau đầu",
+            "category": "symptom",
+            "synonyms": [
+                "dau dau",
+                "đau đầu",
+                "headache"
+            ]
+        },
+        "itchy_eyes": {
+            "label": "Ngứa mắt",
+            "category": "symptom",
+            "synonyms": [
+                "ngua mat",
+                "ngứa mắt",
+                "itchy eyes"
+            ]
+        },
+        "loss_of_appetite": {
+            "label": "Mất cảm giác thèm ăn",
+            "category": "symptom",
+            "synonyms": [
+                "mat cam giac them an",
+                "mất cảm giác thèm ăn",
+                "loss of appetite"
+            ]
+        },
         "loss_of_taste": {
             "label": "Mất vị giác/khứu giác",
             "category": "symptom",
@@ -96,6 +142,63 @@
                 "mất khứu giác",
                 "loss of taste",
                 "loss of smell"
+            ]
+        },
+        "lymph_swelling": {
+            "label": "Sưng hạch",
+            "category": "symptom",
+            "synonyms": [
+                "suong hach",
+                "sưng hạch",
+                "lymph swelling"
+            ]
+        },
+        "muscle_pain": {
+            "label": "Đau cơ",
+            "category": "symptom",
+            "synonyms": [
+                "dau co",
+                "đau cơ",
+                "muscle pain",
+                "myalgia"
+            ]
+        },
+        "nasal_congestion": {
+            "label": "Tắc mũi",
+            "category": "symptom",
+            "synonyms": [
+                "tac mui",
+                "tắc mũi",
+                "nasal congestion"
+            ]
+        },
+        "nausea": {
+            "label": "Buồn nôn",
+            "category": "symptom",
+            "synonyms": [
+                "buon non",
+                "buồn nôn",
+                "nausea"
+            ]
+        },
+        "rash": {
+            "label": "Phát ban",
+            "category": "symptom",
+            "synonyms": [
+                "phat ban",
+                "phát ban",
+                "rash"
+            ]
+        },
+        "runny_nose": {
+            "label": "Sổ mũi",
+            "category": "symptom",
+            "synonyms": [
+                "so mui",
+                "sổ mũi",
+                "chay mui",
+                "chảy mũi",
+                "runny nose"
             ]
         },
         "shortness_of_breath": {
@@ -109,80 +212,24 @@
                 "tho ngan"
             ]
         },
-        "chest_pain": {
-            "label": "Đau tức ngực",
+        "sneezing": {
+            "label": "Hắt hơi",
             "category": "symptom",
             "synonyms": [
-                "dau nguc",
-                "đau ngực",
-                "tuc nguc",
-                "tức ngực",
-                "chest pain"
+                "hat hoi",
+                "hắt hơi",
+                "sneezing"
             ]
         },
-        "nausea": {
-            "label": "Buồn nôn",
+        "sore_throat": {
+            "label": "Đau họng",
             "category": "symptom",
             "synonyms": [
-                "buon non",
-                "buồn nôn",
-                "nausea"
-            ]
-        },
-        "vomiting": {
-            "label": "Nôn",
-            "category": "symptom",
-            "synonyms": [
-                "non",
-                "nôn",
-                "vomit",
-                "vomiting"
-            ]
-        },
-        "diarrhea": {
-            "label": "Tiêu chảy",
-            "category": "symptom",
-            "synonyms": [
-                "tieu chay",
-                "tiêu chảy",
-                "diarrhea"
-            ]
-        },
-        "abdominal_pain": {
-            "label": "Đau bụng",
-            "category": "symptom",
-            "synonyms": [
-                "dau bung",
-                "đau bụng",
-                "abdominal pain",
-                "stomachache"
-            ]
-        },
-        "itchy_eyes": {
-            "label": "Ngứa mắt",
-            "category": "symptom",
-            "synonyms": [
-                "ngua mat",
-                "ngứa mắt",
-                "itchy eyes"
-            ]
-        },
-        "rash": {
-            "label": "Phát ban",
-            "category": "symptom",
-            "synonyms": [
-                "phat ban",
-                "phát ban",
-                "rash"
-            ]
-        },
-        "wheezing": {
-            "label": "Thở khò khè",
-            "category": "symptom",
-            "synonyms": [
-                "tho kho khe",
-                "thở khò khè",
-                "wheezing"
+                "dau hong",
+                "đau họng",
+                "rat hong",
+                "rát họng",
+                "sore throat"
             ]
         },
         "sputum": {
@@ -195,114 +242,27 @@
                 "hemoptysis"
             ]
         },
-        "nasal_congestion": {
-            "label": "Tắc mũi",
+        "wheezing": {
+            "label": "Thở khò khè",
             "category": "symptom",
             "synonyms": [
-                "tac mui",
-                "tắc mũi",
-                "nasal congestion"
+                "tho kho khe",
+                "thở khò khè",
+                "wheezing"
             ]
         },
-        "constipation": {
-            "label": "Táo bón",
+        "vomiting": {
+            "label": "Nôn",
             "category": "symptom",
             "synonyms": [
-                "tao bon",
-                "táo bón",
-                "constipation"
+                "non",
+                "nôn",
+                "vomit",
+                "vomiting"
             ]
-        },
-        "loss_of_appetite": {
-            "label": "Mất cảm giác thèm ăn",
-            "category": "symptom",
-            "synonyms": [
-                "mat cam giac them an",
-                "mất cảm giác thèm ăn",
-                "loss of appetite"
-            ]
-        },
-        "dizziness": {
-            "label": "Chóng mặt",
-            "category": "symptom",
-            "synonyms": [
-                "chong mat",
-                "chóng mặt",
-                "dizziness",
-                "vertigo"
-            ]
-        },
-        "muscle_pain": {
-            "label": "Đau cơ",
-            "category": "symptom",
-            "synonyms": [
-                "dau co",
-                "đau cơ",
-                "muscle pain",
-                "myalgia"
-            ]
-        },
-        "ear_pain": {
-            "label": "Đau tai",
-            "category": "symptom",
-            "synonyms": [
-                "dau tai",
-                "đau tai",
-                "ear pain",
-                "earache"
-            ]
-        },
-        "lymph_swelling": {
-            "label": "Sưng hạch",
-            "category": "symptom",
-            "synonyms": [
-                "suong hach",
-                "sưng hạch",
-                "lymph swelling"
-            ]
-        },
-        "high_fever": {
-            "label": "Sốt cao",
-            "category": "derived",
-            "synonyms": []
-        },
-        "respiratory_syndrome": {
-            "label": "Hội chứng hô hấp",
-            "category": "derived",
-            "synonyms": []
-        },
-        "upper_respiratory_pattern": {
-            "label": "Mẫu viêm đường hô hấp trên",
-            "category": "derived",
-            "synonyms": []
-        },
-        "lower_respiratory_pattern": {
-            "label": "Mẫu viêm đường hô hấp dưới",
-            "category": "derived",
-            "synonyms": []
-        },
-        "viral_pattern": {
-            "label": "Mẫu nhiễm virus",
-            "category": "derived",
-            "synonyms": []
-        },
-        "digestive_syndrome": {
-            "label": "Hội chứng tiêu hóa",
-            "category": "derived",
-            "synonyms": []
         },
         "allergy_pattern": {
             "label": "Mẫu dị ứng",
-            "category": "derived",
-            "synonyms": []
-        },
-        "respiratory_alert": {
-            "label": "Cảnh báo hô hấp",
-            "category": "derived",
-            "synonyms": []
-        },
-        "severe_systemic": {
-            "label": "Biểu hiện toàn thân nặng",
             "category": "derived",
             "synonyms": []
         },
@@ -311,8 +271,63 @@
             "category": "derived",
             "synonyms": []
         },
-        "influenza": {
-            "label": "Nghi cúm",
+        "digestive_syndrome": {
+            "label": "Hội chứng tiêu hóa",
+            "category": "derived",
+            "synonyms": []
+        },
+        "high_fever": {
+            "label": "Sốt cao",
+            "category": "derived",
+            "synonyms": []
+        },
+        "lower_respiratory_pattern": {
+            "label": "Mẫu viêm đường hô hấp dưới",
+            "category": "derived",
+            "synonyms": []
+        },
+        "respiratory_alert": {
+            "label": "Cảnh báo hô hấp",
+            "category": "derived",
+            "synonyms": []
+        },
+        "respiratory_syndrome": {
+            "label": "Hội chứng hô hấp",
+            "category": "derived",
+            "synonyms": []
+        },
+        "severe_systemic": {
+            "label": "Biểu hiện toàn thân nặng",
+            "category": "derived",
+            "synonyms": []
+        },
+        "upper_respiratory_pattern": {
+            "label": "Mẫu viêm đường hô hấp trên",
+            "category": "derived",
+            "synonyms": []
+        },
+        "viral_pattern": {
+            "label": "Mẫu nhiễm virus",
+            "category": "derived",
+            "synonyms": []
+        },
+        "allergic_rhinitis": {
+            "label": "Nghi viêm mũi dị ứng",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "angina": {
+            "label": "Nghi bệnh đột quỵ tim",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "asthma": {
+            "label": "Nghi hen suyễn",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "bronchitis": {
+            "label": "Nghi viêm phế quản",
             "category": "diagnosis",
             "synonyms": []
         },
@@ -326,8 +341,8 @@
             "category": "diagnosis",
             "synonyms": []
         },
-        "allergic_rhinitis": {
-            "label": "Nghi viêm mũi dị ứng",
+        "dengue_fever": {
+            "label": "Nghi sốt xuất huyết",
             "category": "diagnosis",
             "synonyms": []
         },
@@ -336,33 +351,18 @@
             "category": "diagnosis",
             "synonyms": []
         },
+        "gastroenteritis": {
+            "label": "Nghi viêm dạ dày - ruột",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "influenza": {
+            "label": "Nghi cúm",
+            "category": "diagnosis",
+            "synonyms": []
+        },
         "measles_suspected": {
             "label": "Nghi sởi hoặc bệnh phát ban do virus",
-            "category": "diagnosis",
-            "synonyms": []
-        },
-        "urgent_medical_attention": {
-            "label": "Cần đi khám khẩn cấp",
-            "category": "diagnosis",
-            "synonyms": []
-        },
-        "bronchitis": {
-            "label": "Nghi viêm phế quản",
-            "category": "diagnosis",
-            "synonyms": []
-        },
-        "pneumonia": {
-            "label": "Nghi viêm phổi",
-            "category": "diagnosis",
-            "synonyms": []
-        },
-        "asthma": {
-            "label": "Nghi hen suyễn",
-            "category": "diagnosis",
-            "synonyms": []
-        },
-        "sinusitis": {
-            "label": "Nghi viêm xoang",
             "category": "diagnosis",
             "synonyms": []
         },
@@ -376,18 +376,18 @@
             "category": "diagnosis",
             "synonyms": []
         },
-        "gastroenteritis": {
-            "label": "Nghi viêm dạ dày - ruột",
+        "pneumonia": {
+            "label": "Nghi viêm phổi",
             "category": "diagnosis",
             "synonyms": []
         },
-        "dengue_fever": {
-            "label": "Nghi sốt xuất huyết",
+        "sinusitis": {
+            "label": "Nghi viêm xoang",
             "category": "diagnosis",
             "synonyms": []
         },
-        "angina": {
-            "label": "Nghi bệnh đột quỵ tim",
+        "urgent_medical_attention": {
+            "label": "Cần đi khám khẩn cấp",
             "category": "diagnosis",
             "synonyms": []
         }
@@ -475,7 +475,7 @@
             "confidence": 92.0
         },
         {
-            "id": "R8b",
+            "id": "R9",
             "antecedents": [
                 "shortness_of_breath"
             ],
@@ -485,7 +485,7 @@
         },
 
         {
-            "id": "R9",
+            "id": "R10",
             "antecedents": ["cough", "wheezing"],
             "consequent": "lower_respiratory_pattern",
             "explanation": "Ho kèm thở khò khè cho thấy tổn thương đường hô hấp dưới.",
@@ -493,7 +493,7 @@
         },
         
         {
-            "id": "R10",
+            "id": "R11",
             "antecedents": [
                 "cough",
                 "sputum"
@@ -503,7 +503,7 @@
             "confidence": 88.0
         },
         {
-            "id": "R11",
+            "id": "R12",
             "antecedents": [
                 "nasal_congestion",
                 "headache"
@@ -513,7 +513,7 @@
             "confidence": 75.0
         },
         {
-            "id": "R12",
+            "id": "R13",
             "antecedents": [
                 "fever",
                 "ear_pain"
@@ -523,7 +523,7 @@
             "confidence": 70.0
         },
         {
-            "id": "R13",
+            "id": "R14",
             "antecedents": [
                 "viral_pattern",
                 "respiratory_syndrome"
@@ -533,7 +533,7 @@
             "confidence": 82.0
         },
         {
-            "id": "R14",
+            "id": "R15",
             "antecedents": [
                 "upper_respiratory_pattern",
                 "sore_throat"
@@ -543,7 +543,7 @@
             "confidence": 75.0
         },
         {
-            "id": "R15",
+            "id": "R16",
             "antecedents": [
                 "respiratory_syndrome",
                 "loss_of_taste"
@@ -553,7 +553,7 @@
             "confidence": 88.0
         },
         {
-            "id": "R16",
+            "id": "R17",
             "antecedents": [
                 "fever",
                 "rash",
@@ -564,7 +564,7 @@
             "confidence": 85.0
         },
         {
-            "id": "R17",
+            "id": "R18",
             "antecedents": [
                 "fever",
                 "lymph_swelling"
@@ -574,7 +574,7 @@
             "confidence": 80.0
         },
         {
-            "id": "R18",
+            "id": "R19",
             "antecedents": [
                 "allergy_pattern"
             ],
@@ -583,7 +583,7 @@
             "confidence": 80.0
         },
         {
-            "id": "R19",
+            "id": "R20",
             "antecedents": [
                 "rash",
                 "itchy_eyes"
@@ -593,7 +593,7 @@
             "confidence": 75.0
         },
         {
-            "id": "R20",
+            "id": "R21",
             "antecedents": [
                 "digestive_syndrome",
                 "fever"
@@ -603,7 +603,7 @@
             "confidence": 80.0
         },
         {
-            "id": "R21",
+            "id": "R22",
             "antecedents": [
                 "diarrhea",
                 "vomiting",
@@ -614,7 +614,7 @@
             "confidence": 82.0
         },
         {
-            "id": "R22",
+            "id": "R23",
             "antecedents": [
                 "loss_of_appetite",
                 "abdominal_pain"
@@ -624,7 +624,7 @@
             "confidence": 70.0
         },
         {
-            "id": "R23",
+            "id": "R24",
             "antecedents": [
                 "respiratory_syndrome",
                 "cough",
@@ -635,7 +635,7 @@
             "confidence": 78.0
         },
         {
-            "id": "R24",
+            "id": "R25",
             "antecedents": [
                 "lower_respiratory_pattern",
                 "fever"
@@ -645,7 +645,7 @@
             "confidence": 76.0
         },
         {
-            "id": "R25",
+            "id": "R26",
             "antecedents": [
                 "lower_respiratory_pattern",
                 "shortness_of_breath",
@@ -656,7 +656,7 @@
             "confidence": 85.0
         },
         {
-            "id": "R26",
+            "id": "R27",
             "antecedents": [
                 "upper_respiratory_pattern",
                 "sore_throat",
@@ -667,7 +667,7 @@
             "confidence": 73.0
         },
         {
-            "id": "R27",
+            "id": "R28",
             "antecedents": [
                 "sore_throat",
                 "fever",
@@ -678,7 +678,7 @@
             "confidence": 80.0
         },
         {
-            "id": "R28",
+            "id": "R29",
             "antecedents": [
                 "fever",
                 "headache",
@@ -690,7 +690,7 @@
             "confidence": 82.0
         },
         {
-            "id": "R29",
+            "id": "R30",
             "antecedents": [
                 "fever",
                 "rash"
@@ -700,7 +700,7 @@
             "confidence": 76.0
         },
         {
-            "id": "R30",
+            "id": "R31",
             "antecedents": [
                 "chest_pain",
                 "shortness_of_breath"
@@ -710,7 +710,7 @@
             "confidence": 90.0
         },
         {
-            "id": "R31",
+            "id": "R32",
             "antecedents": [
                 "chest_pain",
                 "dizziness"
@@ -720,7 +720,7 @@
             "confidence": 85.0
         },
         {
-            "id": "R32",
+            "id": "R33",
             "antecedents": [
                 "cardiac_alert"
             ],
@@ -729,7 +729,7 @@
             "confidence": 75.0
         },
         {
-            "id": "R33",
+            "id": "R34",
             "antecedents": [
                 "respiratory_alert"
             ],
@@ -738,7 +738,7 @@
             "confidence": 95.0
         },
         {
-            "id": "R34",
+            "id": "R35",
             "antecedents": [
                 "cardiac_alert"
             ],
@@ -747,7 +747,7 @@
             "confidence": 98.0
         },
         {
-            "id": "R35",
+            "id": "R36",
             "antecedents": [
                 "covid19_suspected",
                 "shortness_of_breath"
@@ -757,13 +757,400 @@
             "confidence": 92.0
         },
         {
-            "id": "R36",
+            "id": "R37",
             "antecedents": [
                 "severe_systemic"
             ],
             "consequent": "urgent_medical_attention",
             "explanation": "Biểu hiện toàn thân nặng cần khám khẩn cấp.",
             "confidence": 93.0
+        },
+        {
+            "id": "R38",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R39",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R40",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R41",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R42",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R43",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R44",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R45",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R46",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R47",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R48",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R49",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R50",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R51",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R52",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R53",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R54",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R55",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R56",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R57",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R58",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R59",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R60",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R61",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R62",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R63",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R64",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R65",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R66",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R67",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R68",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R69",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R70",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R71",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R72",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R73",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R74",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R75",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R76",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R77",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R78",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R79",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
+        },
+        {
+            "id": "R80",
+            "antecedents": [
+                
+            ],
+            "consequent": "urgent_medical_attention",
+            "explanation": "",
+            "confidence": 
         }
     ],
     "DIAGNOSIS_METADATA": {
