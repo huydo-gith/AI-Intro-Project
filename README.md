@@ -29,7 +29,7 @@ Hệ thống được thiết kế và mô phỏng chuẩn xác theo kiến trú
 
 * **Tính toán độ tin cậy (Confidence Propagation):**
   * Áp dụng công thức lan truyền độ tin cậy khi kích hoạt luật:
-    $$\text{confidence}_{\text{derived}} = \min(\{\text{confidence}_{\text{antecedents}}\}) \times \frac{\text{confidence}_{\text{rule}}}{100}$$
+    $\text{confidence}_{\text{derived}} = \min(\{\text{confidence}_{\text{antecedents}}\}) \times \frac{\text{confidence}_{\text{rule}}}{100}$
   * Giúp hệ thống không chỉ đưa ra kết luận nhị phân đúng/sai mà còn định lượng được mức độ tin cậy của từng chẩn đoán.
 * **Giải thích vết suy diễn (Explanation Mechanism):**
   * Hiển thị trực quan luồng suy luận (Trace Flow) dạng cây liên kết các luật đã kích hoạt từ triệu chứng ban đầu đến kết luận bệnh lý cuối cùng.
