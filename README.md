@@ -149,3 +149,15 @@ graph TD
 ## ⚠️ Lưu Ý Học Thuật
 
 Hệ chuyên gia này được xây dựng trên nền tảng cơ sở tri thức y học thu gọn phục vụ cho mục đích nghiên cứu học thuật về **Hệ thống dựa trên luật (Rule-Based Systems)** và **Cơ chế suy diễn logic**. Các chẩn đoán và lời khuyên do chatbot đưa ra hoàn toàn mang tính chất tham khảo và mô phỏng minh họa học tập, **không có giá trị thay thế cho chẩn đoán y khoa chuyên nghiệp từ bác sĩ**.
+
+---
+
+## Các thành viên của dự án
+
+1: Đỗ Quốc Huy - 202416227
+
+2: Vũ Trung Kiên - 202416254
+
+3: Trần Đăng Khoa - 202416247
+
+4: Hồ Đình Ánh - 202416127
