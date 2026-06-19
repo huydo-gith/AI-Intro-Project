@@ -4,7 +4,7 @@
 
 ---
 
-## 🌟 Các Thành Phần Cốt Lõi Của Hệ Chuyên Gia
+##  Các Thành Phần Cốt Lõi Của Hệ Chuyên Gia
 
 Hệ thống được thiết kế và mô phỏng chuẩn xác theo kiến trúc của một hệ chuyên gia truyền thống:
 
@@ -34,9 +34,6 @@ Hệ thống được thiết kế và mô phỏng chuẩn xác theo kiến trú
 * **Giải thích vết suy diễn (Explanation Mechanism):**
   * Hiển thị trực quan luồng suy luận (Trace Flow) dạng cây liên kết các luật đã kích hoạt từ triệu chứng ban đầu đến kết luận bệnh lý cuối cùng.
   * Giải thích chi tiết cơ sở khoa học y tế đằng sau mỗi bước suy luận để tăng tính minh bạch của hệ chuyên gia (hộp đen logic được mở ra rõ ràng).
-* **Gợi ý câu hỏi thông minh (Smart Question Selection):**
-  * Sử dụng nguyên lý **Suy diễn lùi (Backward Chaining)** để quét ngược từ các bệnh lý có độ ưu tiên cao hoặc các luật gần thỏa mãn để tìm ra các triệu chứng còn thiếu (`suggest_next_facts`).
-  * Đưa ra câu hỏi định hướng cho người dùng ("Bạn có thêm các dấu hiệu sau không...?") để thu thập thêm dữ kiện, giúp nâng cao độ chính xác của chẩn đoán.
 * **Nhận diện ngôn ngữ tự nhiên cơ bản (NLP Parsing):**
   * Sử dụng cơ chế normalize tiếng Việt (xóa dấu, chuẩn hóa chữ thường) và đối khớp từ đồng nghĩa (`synonyms`) được cấu hình sẵn trong KB. Người dùng có thể chat câu tự nhiên ("tôi bị sot, ho khan va dau hong"), hệ thống tự động trích xuất chính xác các mã triệu chứng tương ứng.
 * **Trang quản trị tri thức (Knowledge Base Editor) toàn diện:**
