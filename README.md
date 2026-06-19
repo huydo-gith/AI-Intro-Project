@@ -29,7 +29,15 @@ Hệ thống được thiết kế và mô phỏng chuẩn xác theo kiến trú
 
 * **Tính toán độ tin cậy (Confidence Propagation):**
   * Áp dụng công thức lan truyền độ tin cậy khi kích hoạt luật:
-    $$\text{confidence}_{\text{derived}} = \min(\{\text{confidence}_{\text{antecedents}}\}) \times \frac{\text{confidence}_{\text{rule}}}{100}$$
+  Áp dụng công thức lan truyền độ tin cậy khi kích hoạt luật:
+
+    $$
+  \text{confidence}_{\text{derived}}
+  =
+  \min(\text{confidence}_{\text{antecedents}})
+  \times
+  \frac{\text{confidence}_{\text{rule}}}{100}
+  $$
   * Giúp hệ thống không chỉ đưa ra kết luận nhị phân đúng/sai mà còn định lượng được mức độ tin cậy của từng chẩn đoán.
 * **Giải thích vết suy diễn (Explanation Mechanism):**
   * Hiển thị trực quan luồng suy luận (Trace Flow) dạng cây liên kết các luật đã kích hoạt từ triệu chứng ban đầu đến kết luận bệnh lý cuối cùng.
@@ -138,3 +146,15 @@ graph TD
 ## ⚠️ Lưu Ý Học Thuật
 
 Hệ chuyên gia này được xây dựng trên nền tảng cơ sở tri thức y học thu gọn phục vụ cho mục đích nghiên cứu học thuật về **Hệ thống dựa trên luật (Rule-Based Systems)** và **Cơ chế suy diễn logic**. Các chẩn đoán và lời khuyên do chatbot đưa ra hoàn toàn mang tính chất tham khảo và mô phỏng minh họa học tập, **không có giá trị thay thế cho chẩn đoán y khoa chuyên nghiệp từ bác sĩ**.
+
+---
+
+## Các thành viên của dự án
+
+1: Đỗ Quốc Huy - 202416227
+
+2: Vũ Trung Kiên - 202416254
+
+3: Trần Đăng Khoa - 202416247
+
+4: Hồ Đình Ánh - 202416127
