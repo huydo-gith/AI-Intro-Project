@@ -6,16 +6,16 @@ from medical_expert.knowledge_base import DIAGNOSIS_METADATA, FACTS
 
 
 class ForwardChainingEngine:
-    def __init__(self, rules: list[dict], conflict_strategy: str = "highest_confidence") -> None:
+    def __init__(self, rules: list[dict], conflict_strategy: str = "all_rules") -> None:
         self.rules = rules
-        # Strategies: "all_rules", "highest_confidence", "specificity"
         self.conflict_strategy = conflict_strategy
 
-    def infer(self, initial_facts: list[str]) -> dict:
+    def infer(self, initial_facts: list[str], conflict_strategy: str = None) -> dict:
         """Forward chaining with confidence calculation."""
-        working_memory = {}  # fact -> confidence
+        strategy = conflict_strategy if conflict_strategy is not None else self.conflict_strategy
+        working_memory = {} 
         for fact in initial_facts:
-            working_memory[fact] = 100  # User-provided facts have 100% confidence
+            working_memory[fact] = 100  
 
         trace = []
         fired_rules = set()
@@ -35,10 +35,8 @@ class ForwardChainingEngine:
                 if consequent in working_memory:
                     continue
 
-                # Calculate confidence for derived fact
                 rule_confidence = rule.get("confidence", 80) / 100
                 antecedent_confidences = [working_memory[fact] / 100 for fact in antecedents]
-                # Use minimum antecedent confidence (all conditions must be met)
                 min_confidence = min(antecedent_confidences) if antecedent_confidences else 1.0
                 derived_confidence = min_confidence * rule_confidence * 100
 
@@ -73,62 +71,64 @@ class ForwardChainingEngine:
             )
 
         diagnoses.sort(key=lambda item: (self.priority_weight(item["priority"]), item["confidence"]), reverse=True)
+        resolved_diagnoses = self._resolve_conflicts(diagnoses, trace, strategy)
         
         return {
             "workingMemory": sorted([(fact, round(conf, 1)) for fact, conf in working_memory.items()]),
             "trace": trace,
-            "diagnoses": diagnoses,
+            "diagnoses": resolved_diagnoses,
             "alternativeDiagnoses": self._get_alternative_diagnoses(diagnoses),
         }
 
-    # def _resolve_conflicts(self, diagnoses: list[dict], trace: list[dict]) -> list[dict]:
-    #     """Apply conflict resolution strategy to diagnoses."""
-    #     if self.conflict_strategy == "all_rules":
-    #         return diagnoses
+    def _resolve_conflicts(self, diagnoses: list[dict], trace: list[dict], strategy: str = None) -> list[dict]:
+        """Apply conflict resolution strategy to diagnoses."""
+        strategy = strategy if strategy is not None else self.conflict_strategy
+        if strategy == "all_rules":
+            return diagnoses
         
-    #     # Group diagnoses by priority
-    #     by_priority = {}
-    #     for d in diagnoses:
-    #         priority = d["priority"]
-    #         if priority not in by_priority:
-    #             by_priority[priority] = []
-    #         by_priority[priority].append(d)
+        # Group diagnoses by priority
+        by_priority = {}
+        for d in diagnoses:
+            priority = d["priority"]
+            if priority not in by_priority:
+                by_priority[priority] = []
+            by_priority[priority].append(d)
         
-    #     resolved = []
-    #     for priority in ["high", "medium", "low"]:
-    #         group = by_priority.get(priority, [])
+        resolved = []
+        for priority in ["high", "medium", "low"]:
+            group = by_priority.get(priority, [])
             
-    #         if self.conflict_strategy == "highest_confidence":
-    #             # Keep only highest confidence in each priority group
-    #             if group:
-    #                 max_conf = max(d["confidence"] for d in group)
-    #                 resolved.extend([d for d in group if d["confidence"] == max_conf])
+            if strategy == "highest_confidence":
+                # Keep only highest confidence in each priority group
+                if group:
+                    max_conf = max(d["confidence"] for d in group)
+                    resolved.extend([d for d in group if d["confidence"] == max_conf])
             
-    #         elif self.conflict_strategy == "specificity":
-    #             # For each diagnosis, find which rule produced it
-    #             # Keep diagnosis from rule with most antecedents (more specific)
-    #             best_by_diagnosis = {}
-    #             for diagnosis in group:
-    #                 diag_key = diagnosis["key"]
-    #                 # Find rules that led to this diagnosis
-    #                 max_antecedent_count = 0
-    #                 for trace_item in trace:
-    #                     if trace_item["consequent"] == diag_key:
-    #                         rule_id = trace_item["ruleId"]
-    #                         rule = next((r for r in self.rules if r["id"] == rule_id), None)
-    #                         if rule:
-    #                             ant_count = len(rule["antecedents"])
-    #                             max_antecedent_count = max(max_antecedent_count, ant_count)
+            elif strategy == "specificity":
+                # For each diagnosis, find which rule produced it
+                # Keep diagnosis from rule with most antecedents (more specific)
+                best_by_diagnosis = {}
+                for diagnosis in group:
+                    diag_key = diagnosis["key"]
+                    # Find rules that led to this diagnosis
+                    max_antecedent_count = 0
+                    for trace_item in trace:
+                        if trace_item["consequent"] == diag_key:
+                            rule_id = trace_item["ruleId"]
+                            rule = next((r for r in self.rules if r["id"] == rule_id), None)
+                            if rule:
+                                ant_count = len(rule["antecedents"])
+                                max_antecedent_count = max(max_antecedent_count, ant_count)
                     
-    #                 diagnosis["_specificity"] = max_antecedent_count
-    #                 best_by_diagnosis[diag_key] = diagnosis
+                    diagnosis["_specificity"] = max_antecedent_count
+                    best_by_diagnosis[diag_key] = diagnosis
                 
-    #             # Keep highest specificity per diagnosis
-    #             for diagnosis in best_by_diagnosis.values():
-    #                 diagnosis.pop("_specificity", None)
-    #                 resolved.append(diagnosis)
+                # Keep highest specificity per diagnosis
+                for diagnosis in best_by_diagnosis.values():
+                    diagnosis.pop("_specificity", None)
+                    resolved.append(diagnosis)
         
-    #     return resolved
+        return resolved
 
     def _get_alternative_diagnoses(self, primary_diagnoses: list[dict]) -> list[dict]:
         """Identify alternative diagnoses that were close but not selected."""
@@ -187,10 +187,10 @@ class ForwardChainingEngine:
         consequent_label = FACTS.get(consequent, {}).get("label", consequent)
         
         if len(antecedent_labels) == 1:
-            return f"Since you have {antecedent_labels[0].lower()}, the system infers {consequent_label.lower()} with {confidence:.0f}% confidence."
+            return f"Hiện tại bạn có triệu chứng {antecedent_labels[0].lower()}, hệ thống suy diễn {consequent_label.lower()} với độ tin cậy {confidence:.0f}. {rule['explanation']}"
         else:
             antecedent_text = ", ".join(antecedent_labels[:-1]) + f", and {antecedent_labels[-1]}"
-            return f"Because you reported {antecedent_text.lower()}, the system infers {consequent_label.lower()} with {confidence:.0f}% confidence. This is based on the medical rule: {rule['explanation']}"
+            return f"Hiện tại bạn khai báo các triệu chứng {antecedent_text.lower()}, hệ thống suy diễn {consequent_label.lower()} với độ tin cậy {confidence:.0f}. {rule['explanation']}"
 
     def _explain_confidence_calculation(self, antecedents: list[str], rule: dict) -> str:
         """Explain how confidence was calculated."""
@@ -276,51 +276,11 @@ class ForwardChainingEngine:
         build_chain_recursive(target_fact)
         return chain
 
-    def get_missing_facts_for_diagnosis(self, current_facts: set[str], diagnosis: str) -> list[tuple[str, float]]:
-        """Backward chaining: find facts needed to reach a diagnosis."""
-        # BFS to find all rules that can lead to diagnosis
-        agenda = [diagnosis]
-        visited = set()
-        needed_facts = {}  # fact -> cumulative importance score
-
-        while agenda:
-            goal = agenda.pop(0)
-            if goal in visited:
-                continue
-            visited.add(goal)
-
-            # Find all rules with this goal as consequent
-            for rule in self.rules:
-                if rule["consequent"] != goal:
-                    continue
-
-                for antecedent in rule["antecedents"]:
-                    if antecedent in current_facts:
-                        continue
-
-                    # Check if this is a leaf fact (symptom) or derived
-                    fact_category = FACTS.get(antecedent, {}).get("category")
-                    rule_conf = rule.get("confidence", 80) / 100
-
-                    if fact_category == "symptom":
-                        # Direct symptom needed
-                        if antecedent not in needed_facts:
-                            needed_facts[antecedent] = rule_conf
-                        else:
-                            needed_facts[antecedent] = max(needed_facts[antecedent], rule_conf)
-                    else:
-                        # Derived fact - add to agenda
-                        agenda.append(antecedent)
-
-        # Sort by importance (confidence)
-        return sorted(needed_facts.items(), key=lambda x: x[1], reverse=True)
-
     def suggest_next_facts(self, current_facts: list[str]) -> list[str]:
-        """Smart question selection using backward chaining."""
+        """Smart question selection based on rules that are close to firing (forward approach)."""
         current = set(current_facts)
         ranked: dict[str, float] = {}
 
-        # Forward approach: find symptoms that would fire more rules
         for rule in self.rules:
             antecedents = rule["antecedents"]
             known_count = sum(1 for fact in antecedents if fact in current)
@@ -336,18 +296,6 @@ class ForwardChainingEngine:
 
                 score = known_count / len(antecedents)
                 ranked[fact] = max(ranked.get(fact, 0), score)
-
-        # Backward approach: find facts needed for high-priority diagnoses
-        for diagnosis_key in DIAGNOSIS_METADATA.keys():
-            if diagnosis_key not in FACTS or FACTS[diagnosis_key]["category"] != "diagnosis":
-                continue
-
-            missing = self.get_missing_facts_for_diagnosis(current, diagnosis_key)
-            for fact, importance in missing[:2]:  # Top 2 missing facts per diagnosis
-                if fact in ranked:
-                    ranked[fact] = ranked[fact] * 1.2 + importance  # Boost if already ranked
-                else:
-                    ranked[fact] = importance * 0.8
 
         return [fact for fact, _ in sorted(ranked.items(), key=lambda item: item[1], reverse=True)[:5]]
 

@@ -124,6 +124,39 @@ h1 {
   margin-bottom: 16px;
 }
 
+.strategy-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.strategy-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.strategy-select {
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text);
+  cursor: pointer;
+  outline: none;
+  transition: all 180ms ease;
+}
+
+.strategy-select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(181, 70, 41, 0.15);
+}
+
 .quick-facts {
   display: flex;
   flex-wrap: wrap;
@@ -366,8 +399,19 @@ textarea:focus {
   }
 
   .section-title {
-    align-items: flex-start;
+    align-items: stretch;
     flex-direction: column;
+    gap: 12px;
+  }
+
+  .strategy-selector {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .strategy-select {
+    width: 100%;
   }
 
   .message {
@@ -492,6 +536,16 @@ textarea:focus {
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(42, 36, 29, 0.1);
   position: relative;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.trace-step:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(71, 43, 17, 0.08);
+  border-color: var(--accent-soft);
+  z-index: 1;
 }
 
 .trace-step:first-child {
@@ -953,5 +1007,165 @@ textarea:focus {
     padding-bottom: 12px;
     overflow-x: auto;
   }
+}
+
+
+/* =============================================
+   BOT MESSAGE RICH RENDERING (upgraded)
+   ============================================= */
+
+/* Inner wrapper for icon + text layout */
+.bot-msg-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.65;
+}
+
+.msg-icon {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  margin-top: 1px;
+}
+
+/* Inline code in bot messages */
+.message.bot code {
+  background: rgba(181, 70, 41, 0.1);
+  color: var(--accent-dark);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-family: "Courier New", monospace;
+}
+
+/* Italic hints */
+.message.bot em {
+  color: var(--accent-dark);
+  font-style: italic;
+}
+
+/* Bold symptom names */
+.message.bot b {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Diagnosis block inside chat message */
+.diag-block {
+  flex: 1;
+  min-width: 0;
+}
+
+.diag-intro {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.diag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.diag-item {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.65);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.diag-item.diag-high {
+  border-color: rgba(147, 44, 44, 0.25);
+  background: rgba(147, 44, 44, 0.05);
+}
+
+.diag-item.diag-medium {
+  border-color: rgba(163, 78, 31, 0.25);
+  background: rgba(163, 78, 31, 0.05);
+}
+
+.diag-item.diag-low {
+  border-color: rgba(47, 107, 65, 0.25);
+  background: rgba(47, 107, 65, 0.05);
+}
+
+.diag-name {
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.diag-bar {
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  color: var(--accent-dark);
+  letter-spacing: 0.02em;
+}
+
+.diag-advice {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Urgent warning message type */
+.msg-type-urgent .bot-msg-inner {
+  background: rgba(147, 44, 44, 0.08);
+  border: 1px solid rgba(147, 44, 44, 0.2);
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.msg-type-urgent strong {
+  color: var(--danger);
+}
+
+/* Typing indicator */
+.typing-indicator {
+  display: flex !important;
+  align-items: center;
+  gap: 5px;
+  padding: 14px 18px !important;
+  width: fit-content;
+}
+
+.typing-indicator span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--muted);
+  animation: typing-bounce 1.2s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+
+/* Diagnosis item — order label & confidence text */
+.diag-order {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.diag-confidence-text {
+  font-size: 0.82rem;
+  color: var(--accent-dark);
+  font-weight: 600;
 }
 

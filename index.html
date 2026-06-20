@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MedExpert Chatbot</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="page-shell">
     <header class="hero">
       <div>
         <p class="eyebrow">Rule-Based Expert System</p>
-        <h1>Chatbot hỗ trợ chẩn đoán y tế bằng logic mệnh đề</h1>
-        <p class="hero-copy">
-          Hệ thống dùng biểu diễn tri thức bằng các luật Horn, bộ nhớ làm việc và cơ chế
-          suy diễn tiến để đưa ra kết luận tạm thời từ các triệu chứng người dùng cung cấp.
-        </p>
+        <h1>Chatbot hỗ trợ chẩn đoán y tế</h1>
       </div>
       <div class="hero-note">
         <p class="hero-note-title">Lưu ý</p>
@@ -23,10 +21,6 @@
       </div>
     </header>
 
-    <nav class="app-tabs">
-      <button class="tab-button active" id="tabChat" type="button">💬 Tư vấn chẩn đoán</button>
-      <button class="tab-button" id="tabKB" type="button">⚙️ Quản lý tri thức</button>
-    </nav>
 
     <!-- Chat Interface Tab -->
     <div id="chatTabContent">
@@ -34,6 +28,14 @@
         <section class="chat-panel">
           <div class="section-title">
             <h2>Chat tư vấn</h2>
+            <div class="strategy-selector">
+              <label for="conflictStrategySelect" class="strategy-label">Chọn hiển thị chẩn đoán:</label>
+              <select id="conflictStrategySelect" class="strategy-select">
+                <option value="all_rules" selected>Hiển thị tất cả các chẩn đoán</option>
+                <option value="highest_confidence">Hiển thị chẩn đoán với độ tin cậy cao nhất</option>
+                <option value="specificity">Hiển thị chẩn đoán đặc trưng nhất</option>
+              </select>
+            </div>
             <button id="resetButton" class="ghost-button" type="button">Làm mới phiên</button>
           </div>
 
@@ -43,11 +45,7 @@
 
           <form id="chatForm" class="chat-form">
             <label class="sr-only" for="chatInput">Nhập triệu chứng</label>
-            <textarea
-              id="chatInput"
-              rows="3"
-              placeholder="Ví dụ: tôi bị sốt, ho, đau họng và hơi mệt..."
-            ></textarea>
+            <textarea id="chatInput" rows="3" placeholder="Ví dụ: tôi bị sốt, ho, đau họng và hơi mệt..."></textarea>
             <button class="primary-button" type="submit">Gửi triệu chứng</button>
           </form>
         </section>
@@ -71,161 +69,72 @@
       </main>
     </div>
 
-    <!-- Knowledge Base Admin Tab -->
-    <div id="kbTabContent" class="hidden">
-      <section class="kb-panel">
-        <div class="kb-layout">
-          <aside class="kb-sidebar">
-            <button class="kb-sub-tab active" id="subTabRules" type="button">📜 Luật suy diễn</button>
-            <button class="kb-sub-tab" id="subTabFacts" type="button">🔍 Triệu chứng & Bệnh</button>
-          </aside>
-          <main class="kb-main-content">
-            <!-- Rules Sub-tab -->
-            <div class="kb-sub-content" id="subContentRules">
-              <div class="kb-header-actions">
-                <input type="text" id="ruleSearch" placeholder="Tìm kiếm luật theo ID hoặc kết luận...">
-                <button class="primary-button" id="addRuleBtn" type="button">➕ Thêm luật mới</button>
-              </div>
-              <div class="table-container">
-                <table class="kb-table">
-                  <thead>
-                    <tr>
-                      <th>Mã Luật</th>
-                      <th>Vế trái (Điều kiện)</th>
-                      <th>Vế phải (Kết luận)</th>
-                      <th>Độ tin cậy</th>
-                      <th>Ý nghĩa luật</th>
-                      <th>Thao tác</th>
-                    </tr>
-                  </thead>
-                  <tbody id="rulesTableBody">
-                    <!-- Loaded dynamically -->
-                  </tbody>
-                </table>
-              </div>
+    <!-- Explanation Modal -->
+    <div class="modal hidden" id="explanationModal" role="dialog" aria-modal="true"
+      aria-labelledby="explanationModalTitle">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <h3 id="explanationModalTitle">Giải thích suy diễn chi tiết</h3>
+        <div class="explanation-details">
+          <div class="explanation-section" style="margin-bottom: 12px;">
+            <strong>Mã Luật:</strong> <span id="expRuleId" class="rule-id"
+              style="font-size: 1.1rem; margin-left: 6px;"></span>
+          </div>
+          <div class="explanation-section" style="margin-bottom: 16px;">
+            <strong>Luật áp dụng:</strong>
+            <div id="expRuleFormula"
+              style="margin-top: 6px; padding: 12px; background: rgba(0,0,0,0.03); border-radius: 12px; font-family: monospace; font-size: 0.95rem; line-height: 1.4;">
             </div>
-
-            <!-- Facts Sub-tab -->
-            <div class="kb-sub-content hidden" id="subContentFacts">
-              <div class="kb-header-actions">
-                <input type="text" id="factSearch" placeholder="Tìm kiếm triệu chứng hoặc bệnh...">
-                <button class="primary-button" id="addFactBtn" type="button">➕ Thêm sự kiện mới</button>
-              </div>
-              <div class="table-container">
-                <table class="kb-table">
-                  <thead>
-                    <tr>
-                      <th>Mã Sự kiện</th>
-                      <th>Tên hiển thị</th>
-                      <th>Phân loại</th>
-                      <th>Từ đồng nghĩa</th>
-                      <th>Thao tác</th>
-                    </tr>
-                  </thead>
-                  <tbody id="factsTableBody">
-                    <!-- Loaded dynamically -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </main>
+          </div>
+          <div class="explanation-section" style="margin-bottom: 16px;">
+            <strong>Giải thích y tế:</strong>
+            <p id="expDetailedText" style="margin-top: 6px; line-height: 1.6; color: var(--text); font-size: 0.95rem;">
+            </p>
+          </div>
+          <div class="explanation-section" style="margin-bottom: 16px;">
+            <strong>Triệu chứng kích hoạt:</strong>
+            <div id="expSymptomsList" class="pill-list"
+              style="margin-top: 6px; display: flex; flex-wrap: wrap; gap: 6px;"></div>
+          </div>
+          <div class="explanation-section">
+            <strong>Tính toán độ tin cậy:</strong>
+            <pre id="expConfidenceBreakdown"
+              style="margin-top: 6px; padding: 12px; background: rgba(47, 107, 65, 0.05); border: 1px solid rgba(47, 107, 65, 0.15); border-radius: 12px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; color: var(--success); line-height: 1.4;"></pre>
+          </div>
         </div>
-      </section>
-    </div>
-
-    <!-- Rule Modal Form -->
-    <div class="modal hidden" id="ruleModal" role="dialog" aria-modal="true" aria-labelledby="ruleModalTitle">
-      <div class="modal-backdrop"></div>
-      <div class="modal-content">
-        <h3 id="ruleModalTitle">Thêm luật mới</h3>
-        <form id="ruleForm" class="modal-form">
-          <div class="form-group">
-            <label for="ruleIdInput">Mã luật (ID):</label>
-            <input type="text" id="ruleIdInput" required placeholder="Ví dụ: R37">
-          </div>
-          <div class="form-group">
-            <label>Vế trái (Antecedents - Chọn các triệu chứng/dẫn xuất cần thỏa mãn):</label>
-            <div class="fact-checkbox-grid" id="antecedentsSelectGrid">
-              <!-- Checkboxes loaded dynamically -->
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="consequentSelect">Vế phải (Consequent - Kết luận suy ra):</label>
-            <select id="consequentSelect" required>
-              <!-- Options loaded dynamically -->
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="confidenceInput">Độ tin cậy (Confidence %: 1 - 100):</label>
-            <input type="number" id="confidenceInput" min="1" max="100" required value="80">
-          </div>
-          <div class="form-group">
-            <label for="ruleExplanationInput">Giải thích y tế:</label>
-            <textarea id="ruleExplanationInput" placeholder="Ví dụ: Có sốt cao và ho khan gợi ý tổn thương hô hấp cấp..." required></textarea>
-          </div>
-          <div class="form-actions">
-            <button class="ghost-button" id="cancelRuleBtn" type="button">Hủy</button>
-            <button class="primary-button" type="submit">Lưu luật</button>
-          </div>
-        </form>
+        <div class="form-actions" style="margin-top: 24px;">
+          <button class="primary-button" id="closeExpBtn" type="button"
+            style="width: 100%; justify-content: center;">Đóng giải thích</button>
+        </div>
       </div>
     </div>
 
-    <!-- Fact Modal Form -->
-    <div class="modal hidden" id="factModal" role="dialog" aria-modal="true" aria-labelledby="factModalTitle">
+    <!-- Diagnosis Explanation Modal -->
+    <div class="modal hidden" id="diagExplanationModal" role="dialog" aria-modal="true"
+      aria-labelledby="diagExplanationModalTitle">
       <div class="modal-backdrop"></div>
       <div class="modal-content">
-        <h3 id="factModalTitle">Thêm sự kiện mới</h3>
-        <form id="factForm" class="modal-form">
-          <div class="form-group">
-            <label for="factKeyInput">Mã sự kiện (Key - Chỉ dùng chữ thường, số, dấu gạch dưới):</label>
-            <input type="text" id="factKeyInput" required placeholder="Ví dụ: red_eyes" pattern="[a-z0-9_]+">
+        <h3 id="diagExplanationModalTitle">Giải thích lập luận bệnh lý</h3>
+        <div class="explanation-details">
+          <div class="explanation-section" style="margin-bottom: 12px;">
+            <strong>Bệnh chẩn đoán:</strong> <span id="expDiagLabel"
+              style="font-size: 1.15rem; font-weight: 700; margin-left: 6px; color: var(--accent-dark);"></span>
           </div>
-          <div class="form-group">
-            <label for="factLabelInput">Tên hiển thị (Tiếng Việt):</label>
-            <input type="text" id="factLabelInput" required placeholder="Ví dụ: Đỏ mắt">
-          </div>
-          <div class="form-group">
-            <label for="factCategorySelect">Phân loại:</label>
-            <select id="factCategorySelect" required>
-              <option value="symptom">Triệu chứng (Symptom)</option>
-              <option value="derived">Sự kiện dẫn xuất (Derived)</option>
-              <option value="diagnosis">Bệnh lý/Kết luận chẩn đoán (Diagnosis)</option>
-            </select>
-          </div>
-          <div class="form-group" id="synonymsGroup">
-            <label for="factSynonymsInput">Từ đồng nghĩa (Phân tách bằng dấu phẩy):</label>
-            <input type="text" id="factSynonymsInput" placeholder="Ví dụ: mat do, đau mắt, đỏ mắt">
-          </div>
-          <div class="form-group checkbox-group" id="quickFactGroup">
-            <input type="checkbox" id="factQuickFactCheckbox">
-            <label for="factQuickFactCheckbox">Hiển thị ở danh mục triệu chứng chọn nhanh</label>
-          </div>
-          
-          <!-- Diagnosis specifics -->
-          <div class="diagnosis-only hidden" id="diagnosisFields">
-            <div class="form-group">
-              <label for="diagPrioritySelect">Mức độ cảnh báo:</label>
-              <select id="diagPrioritySelect">
-                <option value="low">🟢 Theo dõi thông thường (Low)</option>
-                <option value="medium">🟡 Cần chú ý theo dõi (Medium)</option>
-                <option value="high">🔴 Nguy cấp cần khám ngay (High)</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="diagAdviceInput">Lời khuyên y tế:</label>
-              <textarea id="diagAdviceInput" placeholder="Ví dụ: Bạn nên nghỉ ngơi, đo huyết áp thường xuyên và báo cho bác sĩ nếu..."></textarea>
+          <div class="explanation-section" style="margin-bottom: 16px;">
+            <strong>Chuỗi suy diễn chi tiết:</strong>
+            <div id="expDiagChain"
+              style="margin-top: 8px; padding: 16px; background: rgba(0,0,0,0.03); border-radius: 12px; font-family: monospace; font-size: 0.95rem; line-height: 1.6; white-space: pre-wrap; max-height: 300px; overflow-y: auto;">
             </div>
           </div>
-          <div class="form-actions">
-            <button class="ghost-button" id="cancelFactBtn" type="button">Hủy</button>
-            <button class="primary-button" type="submit">Lưu sự kiện</button>
-          </div>
-        </form>
+        </div>
+        <div class="form-actions" style="margin-top: 24px;">
+          <button class="primary-button" id="closeDiagExpBtn" type="button"
+            style="width: 100%; justify-content: center;">Đóng giải thích</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script type="module" src="src/app.js"></script>
+    <script type="module" src="src/app.js"></script>
 </body>
+
 </html>
