@@ -261,6 +261,523 @@
                 "vomiting"
             ]
         },
+        "high_fever_sym": {
+            "label": "Sốt cao",
+            "category": "symptom",
+            "synonyms": [
+                "sot cao",
+                "sốt cao",
+                "high fever"
+            ]
+        },
+        "pharyngitis_sym": {
+            "label": "Viêm họng",
+            "category": "symptom",
+            "synonyms": [
+                "viem hong",
+                "viêm họng",
+                "pharyngitis"
+            ]
+        },
+        "chills": {
+            "label": "Ớn lạnh",
+            "category": "symptom",
+            "synonyms": [
+                "on lanh",
+                "ớn lạnh",
+                "chills"
+            ]
+        },
+        "stuffy_nose": {
+            "label": "Nghẹt mũi",
+            "category": "symptom",
+            "synonyms": [
+                "nghet mui",
+                "nghẹt mũi",
+                "stuffy nose"
+            ]
+        },
+        "reduced_smell": {
+            "label": "Giảm khứu giác",
+            "category": "symptom",
+            "synonyms": [
+                "giam khuu giac",
+                "giảm khứu giác",
+                "reduced smell"
+            ]
+        },
+        "jaw_lymph_node_swelling": {
+            "label": "Nổi hạch góc hàm",
+            "category": "symptom",
+            "synonyms": [
+                "noi hach goc ham",
+                "nổi hạch góc hàm",
+                "jaw lymph node swelling"
+            ]
+        },
+        "pain_when_swallowing": {
+            "label": "Đau họng khi nuốt",
+            "category": "symptom",
+            "synonyms": [
+                "dau hong khi nuot",
+                "đau họng khi nuốt",
+                "pain when swallowing"
+            ]
+        },
+        "paroxysmal_cough": {
+            "label": "Ho từng cơn",
+            "category": "symptom",
+            "synonyms": [
+                "ho tung con",
+                "ho từng cơn",
+                "paroxysmal cough"
+            ]
+        },
+        "hoarseness": {
+            "label": "Khàn tiếng",
+            "category": "symptom",
+            "synonyms": [
+                "khan tieng",
+                "khàn tiếng",
+                "hoarseness"
+            ]
+        },
+        "productive_cough": {
+            "label": "Ho có đờm",
+            "category": "symptom",
+            "synonyms": [
+                "ho co dom",
+                "ho có đờm",
+                "productive cough"
+            ]
+        },
+        "insomnia": {
+            "label": "Khó ngủ",
+            "category": "symptom",
+            "synonyms": [
+                "kho ngu",
+                "khó ngủ",
+                "insomnia"
+            ]
+        },
+        "bloody_sputum": {
+            "label": "Ho ra máu",
+            "category": "symptom",
+            "synonyms": [
+                "ho ra mau",
+                "ho ra máu",
+                "bloody sputum"
+            ]
+        },
+        "thick_sputum": {
+            "label": "Đờm đặc",
+            "category": "symptom",
+            "synonyms": [
+                "dom dac",
+                "đờm đặc",
+                "thick sputum"
+            ]
+        },
+        "nasal_polyp": {
+            "label": "Polyp mũi",
+            "category": "symptom",
+            "synonyms": [
+                "polyp mui",
+                "polyp mũi",
+                "nasal polyp"
+            ]
+        },
+        "excessive_sweating": {
+            "label": "Đổ mồ hôi nhiều",
+            "category": "symptom",
+            "synonyms": [
+                "do mo hoi nhieu",
+                "đổ mồ hôi nhiều",
+                "excessive sweating"
+            ]
+        },
+        "dull_abdominal_pain": {
+            "label": "Đau bụng âm ỉ",
+            "category": "symptom",
+            "synonyms": [
+                "dau bung am i",
+                "đau bụng âm ỉ",
+                "dull abdominal pain"
+            ]
+        },
+        "worsening_shortness_of_breath": {
+            "label": "Khó thở tăng",
+            "category": "symptom",
+            "synonyms": [
+                "kho tho tang",
+                "khó thở tăng",
+                "worsening shortness of breath"
+            ]
+        },
+        "persistent_dry_cough": {
+            "label": "Ho khan dai dẳng",
+            "category": "symptom",
+            "synonyms": [
+                "ho khan dai dang",
+                "ho khan dai dẳng",
+                "persistent dry cough"
+            ]
+        },
+        "persistent_chest_pain": {
+            "label": "Đau tức ngực thường xuyên",
+            "category": "symptom",
+            "synonyms": [
+                "dau tuc nguc thuong xuyen",
+                "đau tức ngực thường xuyên",
+                "persistent chest pain"
+            ]
+        },
+        "persistent_cough": {
+            "label": "Ho kéo dài",
+            "category": "symptom",
+            "synonyms": [
+                "ho keo dai",
+                "ho kéo dài",
+                "persistent cough"
+            ]
+        },
+        "weight_loss": {
+            "label": "Sụt cân",
+            "category": "symptom",
+            "synonyms": [
+                "sut can",
+                "sụt cân",
+                "weight loss"
+            ]
+        },
+        "persistent_chest_tightness": {
+            "label": "Tức ngực kéo dài",
+            "category": "symptom",
+            "synonyms": [
+                "tuc nguc keo dai",
+                "tức ngực kéo dài",
+                "persistent chest tightness"
+            ]
+        },
+        "difficulty_swallowing": {
+            "label": "Khó nuốt",
+            "category": "symptom",
+            "synonyms": [
+                "kho nuot",
+                "khó nuốt",
+                "difficulty swallowing"
+            ]
+        },
+        "itchy_nose": {
+            "label": "Ngứa mũi",
+            "category": "symptom",
+            "synonyms": [
+                "ngua mui",
+                "ngứa mũi",
+                "itchy nose"
+            ]
+        },
+        "nosebleed": {
+            "label": "Chảy máu mũi",
+            "category": "symptom",
+            "synonyms": [
+                "chay mau mui",
+                "chảy máu mũi",
+                "nosebleed",
+                "nose bleed"
+            ]
+        },
+        "hard_stool": {
+            "label": "Phân cứng",
+            "category": "symptom",
+            "synonyms": [
+                "phan cung",
+                "phân cứng",
+                "hard stool"
+            ]
+        },
+        "heartburn": {
+            "label": "Ợ nóng",
+            "category": "symptom",
+            "synonyms": [
+                "o nong",
+                "ợ nóng",
+                "heartburn"
+            ]
+        },
+        "acid_reflux": {
+            "label": "Ợ chua",
+            "category": "symptom",
+            "synonyms": [
+                "o chua",
+                "ợ chua",
+                "acid reflux"
+            ]
+        },
+        "blood_in_stool": {
+            "label": "Phân lẫn máu",
+            "category": "symptom",
+            "synonyms": [
+                "phan lan mau",
+                "phân lẫn máu",
+                "blood in stool"
+            ]
+        },
+        "cramping_abdominal_pain": {
+            "label": "Đau quặn bụng",
+            "category": "symptom",
+            "synonyms": [
+                "dau quan bung",
+                "đau quặn bụng",
+                "cramping abdominal pain"
+            ]
+        },
+        "mucus_in_stool": {
+            "label": "Phân lẫn chất nhầy",
+            "category": "symptom",
+            "synonyms": [
+                "phan lan chat nhay",
+                "phân lẫn chất nhầy",
+                "mucus in stool"
+            ]
+        },
+        "dehydration": {
+            "label": "Mất nước",
+            "category": "symptom",
+            "synonyms": [
+                "mat nuoc",
+                "mất nước",
+                "dehydration"
+            ]
+        },
+        "belching": {
+            "label": "Ợ hơi",
+            "category": "symptom",
+            "synonyms": [
+                "o hoi",
+                "ợ hơi",
+                "belching"
+            ]
+        },
+        "anal_swelling": {
+            "label": "Sưng đau hậu môn",
+            "category": "symptom",
+            "synonyms": [
+                "sung dau hau mon",
+                "sưng đau hậu môn",
+                "anal swelling"
+            ]
+        },
+        "lower_abdominal_pain": {
+            "label": "Đau bụng dưới",
+            "category": "symptom",
+            "synonyms": [
+                "dau bung duoi",
+                "đau bụng dưới",
+                "lower abdominal pain"
+            ]
+        },
+        "mouth_ulcer": {
+            "label": "Loét miệng",
+            "category": "symptom",
+            "synonyms": [
+                "loet mieng",
+                "loét miệng",
+                "mouth ulcer"
+            ]
+        },
+        "blister": {
+            "label": "Phồng nước",
+            "category": "symptom",
+            "synonyms": [
+                "phong nuoc",
+                "phồng nước",
+                "blister"
+            ]
+        },
+        "red_ear_canal": {
+            "label": "Đỏ ống tai",
+            "category": "symptom",
+            "synonyms": [
+                "do ong tai",
+                "đỏ ống tai",
+                "red ear canal"
+            ]
+        },
+        "water_in_ear_sensation": {
+            "label": "Cảm giác có nước trong tai",
+            "category": "symptom",
+            "synonyms": [
+                "cam giac co nuoc trong tai",
+                "cảm giác có nước trong tai",
+                "water in ear sensation"
+            ]
+        },
+        "orthopnea": {
+            "label": "Khó thở khi nằm",
+            "category": "symptom",
+            "synonyms": [
+                "kho tho khi nam",
+                "khó thở khi nằm",
+                "orthopnea"
+            ]
+        },
+        "arrhythmia": {
+            "label": "Rối loạn nhịp tim",
+            "category": "symptom",
+            "synonyms": [
+                "roi loan nhip tim",
+                "rối loạn nhịp tim",
+                "arrhythmia",
+                "irregular heartbeat"
+            ]
+        },
+        "generalized_body_pain": {
+            "label": "Đau toàn thân",
+            "category": "symptom",
+            "synonyms": [
+                "dau toan than",
+                "đau toàn thân",
+                "generalized body pain"
+            ]
+        },
+        "syncope": {
+            "label": "Ngất",
+            "category": "symptom",
+            "synonyms": [
+                "ngat",
+                "ngất",
+                "syncope",
+                "fainting"
+            ]
+        },
+        "conjunctival_redness": {
+            "label": "Đỏ mắt",
+            "category": "symptom",
+            "synonyms": [
+                "do mat",
+                "đỏ mắt",
+                "conjunctival redness",
+                "red eyes"
+            ]
+        },
+        "parotid_pain": {
+            "label": "Đau tuyến mang tai",
+            "category": "symptom",
+            "synonyms": [
+                "dau tuyen mang tai",
+                "đau tuyến mang tai",
+                "parotid pain"
+            ]
+        },
+        "parotid_swelling": {
+            "label": "Sưng tuyến mang tai",
+            "category": "symptom",
+            "synonyms": [
+                "sung tuyen mang tai",
+                "sưng tuyến mang tai",
+                "parotid swelling"
+            ]
+        },
+        "postauricular_lymph_node_swelling": {
+            "label": "Sưng hạch sau tai",
+            "category": "symptom",
+            "synonyms": [
+                "sung hach sau tai",
+                "sưng hạch sau tai",
+                "postauricular lymph node swelling"
+            ]
+        },
+        "nose_pain": {
+            "label": "Đau mũi",
+            "category": "symptom",
+            "synonyms": [
+                "dau mui",
+                "đau mũi",
+                "nose pain"
+            ]
+        },
+        "blisters": {
+            "label": "Nổi mụn nước",
+            "category": "symptom",
+            "synonyms": [
+                "noi mun nuoc",
+                "nổi mụn nước",
+                "blisters"
+            ]
+        },
+        "eye_scarring": {
+            "label": "Sẹo mắt",
+            "category": "symptom",
+            "synonyms": [
+                "seo mat",
+                "sẹo mắt",
+                "eye scarring"
+            ]
+        },
+        "trachoma_follicles": {
+            "label": "Hột ở mắt",
+            "category": "symptom",
+            "synonyms": [
+                "hot o mat",
+                "hột ở mắt",
+                "trachoma follicles"
+            ]
+        },
+        "jaundice": {
+            "label": "Vàng da",
+            "category": "symptom",
+            "synonyms": [
+                "vang da",
+                "vàng da",
+                "jaundice"
+            ]
+        },
+        "dark_urine": {
+            "label": "Nước tiểu sẫm màu",
+            "category": "symptom",
+            "synonyms": [
+                "nuoc tieu sam mau",
+                "nước tiểu sẫm màu",
+                "dark urine"
+            ]
+        },
+        "rigor": {
+            "label": "Rét run",
+            "category": "symptom",
+            "synonyms": [
+                "ret run",
+                "rét run",
+                "rigor"
+            ]
+        },
+        "profuse_sweating": {
+            "label": "Vã mồ hôi",
+            "category": "symptom",
+            "synonyms": [
+                "va mo hoi",
+                "vã mồ hôi",
+                "profuse sweating"
+            ]
+        },
+        "seizure": {
+            "label": "Co giật",
+            "category": "symptom",
+            "synonyms": [
+                "co giat",
+                "co giật",
+                "seizure"
+            ]
+        },
+        "coma": {
+            "label": "Hôn mê",
+            "category": "symptom",
+            "synonyms": [
+                "hon me",
+                "hôn mê",
+                "coma"
+            ]
+        },
         "allergy_pattern": {
             "label": "Mẫu dị ứng",
             "category": "derived",
@@ -308,6 +825,76 @@
         },
         "viral_pattern": {
             "label": "Mẫu nhiễm virus",
+            "category": "derived",
+            "synonyms": []
+        },
+        "ent_syndrome": {
+            "label": "Hội chứng tai mũi họng",
+            "category": "derived",
+            "synonyms": []
+        },
+        "throat_disorder": {
+            "label": "Bệnh lý họng",
+            "category": "derived",
+            "synonyms": []
+        },
+        "nasal_disorder": {
+            "label": "Bệnh lý mũi",
+            "category": "derived",
+            "synonyms": []
+        },
+        "ear_disorder": {
+            "label": "Bệnh lý tai",
+            "category": "derived",
+            "synonyms": []
+        },
+        "upper_digestive_pattern": {
+            "label": "Mẫu bệnh tiêu hóa trên",
+            "category": "derived",
+            "synonyms": []
+        },
+        "lower_digestive_pattern": {
+            "label": "Mẫu bệnh tiêu hóa dưới",
+            "category": "derived",
+            "synonyms": []
+        },
+        "gastrointestinal_bleeding": {
+            "label": "Dấu hiệu xuất huyết tiêu hóa",
+            "category": "derived",
+            "synonyms": []
+        },
+        "rash_pattern": {
+            "label": "Mẫu phát ban",
+            "category": "derived",
+            "synonyms": []
+        },
+        "vesicular_rash": {
+            "label": "Phát ban dạng mụn nước",
+            "category": "derived",
+            "synonyms": []
+        },
+        "hepatic_pattern": {
+            "label": "Mẫu bệnh gan mật",
+            "category": "derived",
+            "synonyms": []
+        },
+        "eye_disorder": {
+            "label": "Bệnh lý mắt",
+            "category": "derived",
+            "synonyms": []
+        },
+        "neurological_alert": {
+            "label": "Cảnh báo thần kinh",
+            "category": "derived",
+            "synonyms": []
+        },
+        "dehydration_alert": {
+            "label": "Cảnh báo mất nước",
+            "category": "derived",
+            "synonyms": []
+        },
+        "infectious_pattern": {
+            "label": "Mẫu bệnh truyền nhiễm",
             "category": "derived",
             "synonyms": []
         },
@@ -388,6 +975,156 @@
         },
         "urgent_medical_attention": {
             "label": "Cần đi khám khẩn cấp",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "laryngitis": {
+            "label": "Nghi viêm thanh quản",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "copd": {
+            "label": "Nghi phổi tắc nghẽn mạn tính (COPD)",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "pulmonary_tuberculosis": {
+            "label": "Nghi lao phổi",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "lung_cancer": {
+            "label": "Nghi ung thư phổi",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "cystic_fibrosis": {
+            "label": "Nghi xơ nang",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "nasal_polyps": {
+            "label": "Nghi polyp mũi",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "otitis_externa": {
+            "label": "Nghi viêm ống tai ngoài",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "constipation_suspected": {
+            "label": "Nghi táo bón",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "acute_diarrhea": {
+            "label": "Nghi tiêu chảy cấp",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "gerd": {
+            "label": "Nghi trào ngược dạ dày thực quản",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "ibs": {
+            "label": "Nghi hội chứng ruột kích thích",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "gastritis": {
+            "label": "Nghi viêm dạ dày",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "colitis": {
+            "label": "Nghi viêm đại tràng",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "peptic_ulcer_disease": {
+            "label": "Nghi viêm loét dạ dày",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "appendicitis": {
+            "label": "Nghi viêm ruột thừa",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "hemorrhoids": {
+            "label": "Nghi bệnh trĩ",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "valvular_heart_disease": {
+            "label": "Nghi bệnh van tim",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "myocardial_ischemia": {
+            "label": "Nghi thiếu máu cơ tim",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "arrhythmia_suspected": {
+            "label": "Nghi rối loạn nhịp tim",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "measles": {
+            "label": "Nghi sởi",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "mumps": {
+            "label": "Nghi quai bị",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "varicella": {
+            "label": "Nghi thủy đậu",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "trachoma": {
+            "label": "Nghi đau mắt hột",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "cholera": {
+            "label": "Nghi tả",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "typhoid_fever": {
+            "label": "Nghi thương hàn",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "hepatitis": {
+            "label": "Nghi viêm gan",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "malaria": {
+            "label": "Nghi sốt rét",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "japanese_encephalitis": {
+            "label": "Nghi viêm não Nhật Bản",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "hand_foot_mouth_disease": {
+            "label": "Nghi tay chân miệng",
+            "category": "diagnosis",
+            "synonyms": []
+        },
+        "dehydration_suspected": {
+            "label": "Nghi mất nước",
             "category": "diagnosis",
             "synonyms": []
         }
@@ -486,7 +1223,10 @@
 
         {
             "id": "R10",
-            "antecedents": ["cough", "wheezing"],
+            "antecedents": [
+                "cough",
+                "wheezing"
+            ],
             "consequent": "lower_respiratory_pattern",
             "explanation": "Ho kèm thở khò khè cho thấy tổn thương đường hô hấp dưới.",
             "confidence": 80.0
@@ -520,7 +1260,7 @@
             ],
             "consequent": "otitis_media",
             "explanation": "Sốt kèm đau tai gợi ý viêm tai giữa.",
-            "confidence": 70.0
+            "confidence": 75.0
         },
         {
             "id": "R14",
@@ -579,7 +1319,7 @@
                 "allergy_pattern"
             ],
             "consequent": "allergic_rhinitis",
-            "explanation": "Mẫu dị ứng dẫn tới nghi ngờ viêm mũi dị ứng.",
+            "explanation": "Mẫu dị ứng dẫn tới nghi ngờ bị dị ứng.",
             "confidence": 80.0
         },
         {
@@ -621,7 +1361,7 @@
             ],
             "consequent": "digestive_syndrome",
             "explanation": "Mất thèm ăn kèm đau bụng gợi ý vấn đề tiêu hóa.",
-            "confidence": 70.0
+            "confidence": 78.0
         },
         {
             "id": "R24",
@@ -664,7 +1404,7 @@
             ],
             "consequent": "sinusitis",
             "explanation": "Triệu chứng đường hô hấp trên kèm tắc mũi gợi ý viêm xoang.",
-            "confidence": 73.0
+            "confidence": 79.0
         },
         {
             "id": "R28",
@@ -734,7 +1474,7 @@
                 "respiratory_alert"
             ],
             "consequent": "urgent_medical_attention",
-            "explanation": "Khi có cảnh báo hô hấp, hệ thống kết luận cần khám khẩn cấp.",
+            "explanation": "Cảnh báo hô hấp, yêu cầu khám khẩn cấp.",
             "confidence": 95.0
         },
         {
@@ -743,7 +1483,7 @@
                 "cardiac_alert"
             ],
             "consequent": "urgent_medical_attention",
-            "explanation": "Cảnh báo tim mạch yêu cầu khám khẩn cấp.",
+            "explanation": "Cảnh báo tim mạch, yêu cầu khám khẩn cấp.",
             "confidence": 98.0
         },
         {
@@ -767,436 +1507,725 @@
         },
         {
             "id": "R38",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["sore_throat", "runny_nose"],
+            "consequent": "ent_syndrome",
+            "explanation": "Đau họng và sổ mũi có dấu hiệu của hội chứng tai mũi họng.",
+            "confidence": 84.0
         },
         {
             "id": "R39",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["pain_when_swallowing", "hoarseness"],
+            "consequent": "throat_disorder",
+            "explanation": "Đau họng khi nuốt và khàn tiếng có dấu hiệu của bệnh lý họng.",
+            "confidence": 91.0
         },
         {
             "id": "R40",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["nasal_congestion", "nose_pain"],
+            "consequent": "nasal_disorder",
+            "explanation": "Tắc mũi và đau mũi có dấu hiệu của bệnh lý mũi.",
+            "confidence": 89.0
         },
         {
             "id": "R41",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["ear_pain", "red_ear_canal"],
+            "consequent": "ear_disorder",
+            "explanation": "Đau tai và đỏ ống tai có dấu hiệu của bệnh lý tai.",
+            "confidence": 93.0
         },
         {
             "id": "R42",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["heartburn", "acid_reflux"],
+            "consequent": "upper_digestive_pattern",
+            "explanation": "Ợ nóng và ợ chua có dấu hiệu của mẫu bệnh tiêu hóa trên.",
+            "confidence": 95.0
         },
         {
             "id": "R43",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["diarrhea", "lower_abdominal_pain"],
+            "consequent": "lower_digestive_pattern",
+            "explanation": "Tiêu chảy và đau bụng dưới có dấu hiệu của mẫu bệnh tiêu hóa dưới.",
+            "confidence": 88.0
         },
         {
             "id": "R44",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["blood_in_stool"],
+            "consequent": "gastrointestinal_bleeding",
+            "explanation": "Phân lẫn máu có dấu hiệu của dấu hiệu xuất huyết tiêu hóa.",
+            "confidence": 98.0
         },
         {
             "id": "R45",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["rash", "blisters"],
+            "consequent": "rash_pattern",
+            "explanation": "Phát ban và nổi mụn nước có dấu hiệu của mẫu phát ban.",
+            "confidence": 86.0
         },
         {
             "id": "R46",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["blisters", "rash"],
+            "consequent": "vesicular_rash",
+            "explanation": "Nổi mụn nước và phát ban có dấu hiệu của phát ban dạng mụn nước.",
+            "confidence": 96.0
         },
         {
             "id": "R47",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["jaundice", "dark_urine"],
+            "consequent": "hepatic_pattern",
+            "explanation": "Vàng da và nước tiểu sẫm màu có dấu hiệu của mẫu bệnh gan mật.",
+            "confidence": 97.0
         },
         {
             "id": "R48",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["conjunctival_redness", "itchy_eyes"],
+            "consequent": "eye_disorder",
+            "explanation": "Đỏ mắt và ngứa mắt có dấu hiệu của bệnh lý mắt.",
+            "confidence": 87.0
         },
         {
             "id": "R49",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["seizure", "coma"],
+            "consequent": "neurological_alert",
+            "explanation": "Co giật và hôn mê có dấu hiệu của cảnh báo thần kinh.",
+            "confidence": 100.0
         },
         {
             "id": "R50",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["fever", "rigor"],
+            "consequent": "infectious_pattern",
+            "explanation": "Sốt và rét run có dấu hiệu của mẫu bệnh truyền nhiễm.",
+            "confidence": 92.0
         },
         {
             "id": "R51",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["dehydration", "profuse_sweating"],
+            "consequent": "dehydration_alert",
+            "explanation": "Mất nước và vã mồ hôi có dấu hiệu của cảnh báo mất nước.",
+            "confidence": 90.0
         },
         {
             "id": "R52",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["hoarseness", "pharyngitis_sym", "cough"],
+            "consequent": "laryngitis",
+            "explanation": "Khàn tiếng, viêm họng và ho có dấu hiệu của viêm thanh quản.",
+            "confidence": 74.0
         },
         {
             "id": "R53",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["bloody_sputum", "shortness_of_breath", "nasal_polyp", "excessive_sweating", "abdominal_pain"],
+            "consequent": "cystic_fibrosis",
+            "explanation": "Ho ra máu, khó thở, polyp mũi, đổ mồ hôi nhiều và đau bụng có dấu hiệu của xơ nang.",
+            "confidence": 92.0
         },
         {
             "id": "R54",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["shortness_of_breath", "persistent_cough", "chest_pain"],
+            "consequent": "copd",
+            "explanation": "Khó thở, ho kéo dài và đau ngực có dấu hiệu của bệnh phổi tắc nghẽn mạn tính.",
+            "confidence": 90.0
         },
         {
             "id": "R55",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["persistent_cough", "chest_pain", "weight_loss"],
+            "consequent": "pulmonary_tuberculosis",
+            "explanation": "Ho kéo dài, đau ngực và sụt cân có dấu hiệu của lao phổi.",
+            "confidence": 91.0
         },
         {
             "id": "R56",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["persistent_cough", "chest_pain", "fatigue", "difficulty_swallowing"],
+            "consequent": "lung_cancer",
+            "explanation": "Ho kéo dài, đau ngực, mệt mỏi và khó nuốt có dấu hiệu của ung thư phổi.",
+            "confidence": 84.0
         },
         {
             "id": "R57",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["stuffy_nose", "nosebleed", "headache"],
+            "consequent": "nasal_polyps",
+            "explanation": "Nghẹt mũi, chảy máu mũi và đau đầu có dấu hiệu của polyp mũi.",
+            "confidence": 70.0
         },
         {
             "id": "R58",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["constipation", "hard_stool"],
+            "consequent": "constipation",
+            "explanation": "Táo bón và phân cứng có dấu hiệu của táo bón.",
+            "confidence": 72.0
         },
         {
             "id": "R59",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["nausea", "abdominal_pain", "diarrhea"],
+            "consequent": "acute_diarrhea",
+            "explanation": "Buồn nôn, đau bụng và tiêu chảy có dấu hiệu của tiêu chảy cấp.",
+            "confidence": 76.0
         },
         {
             "id": "R60",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["heartburn", "nausea", "difficulty_swallowing"],
+            "consequent": "gerd",
+            "explanation": "Ợ nóng, buồn nôn và khó nuốt có dấu hiệu của trào ngược dạ dày thực quản.",
+            "confidence": 78.0
         },
         {
             "id": "R61",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["abdominal_pain", "diarrhea"],
+            "consequent": "ibs",
+            "explanation": "Đau bụng và tiêu chảy có dấu hiệu của hội chứng ruột kích thích.",
+            "confidence": 74.0
         },
         {
             "id": "R62",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["abdominal_pain", "blood_in_stool", "nausea"],
+            "consequent": "gastritis",
+            "explanation": "Đau bụng, đi ngoài ra máu và buồn nôn có dấu hiệu của viêm dạ dày.",
+            "confidence": 78.0
         },
         {
             "id": "R63",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["cramping_abdominal_pain", "mucus_in_stool", "diarrhea", "dehydration"],
+            "consequent": "colitis",
+            "explanation": "Đau quặn bụng, có chất nhầy trong phân, tiêu chảy và mất nước có dấu hiệu của viêm đại tràng.",
+            "confidence": 82.0
         },
         {
             "id": "R64",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["abdominal_pain", "nausea", "fatigue", "belching", "acid_reflux"],
+            "consequent": "peptic_ulcer_disease",
+            "explanation": "Đau bụng, buồn nôn, mệt mỏi, ợ hơi và trào ngược axit có dấu hiệu của viêm loét dạ dày.",
+            "confidence": 84.0
         },
         {
             "id": "R65",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["anal_swelling", "lower_abdominal_pain", "blood_in_stool"],
+            "consequent": "hemorrhoids",
+            "explanation": "Sưng hậu môn, đau bụng dưới và đi ngoài ra máu có dấu hiệu của bệnh trĩ.",
+            "confidence": 76.0
         },
         {
             "id": "R66",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["cramping_abdominal_pain", "headache", "constipation"],
+            "consequent": "appendicitis",
+            "explanation": "Đau quặn bụng, đau đầu và táo bón có dấu hiệu của viêm ruột thừa.",
+            "confidence": 86.0
         },
         {
             "id": "R67",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["headache", "fatigue", "diarrhea"],
+            "consequent": "light_hand_foot_mouth_disease",
+            "explanation": "Đau đầu, mệt mỏi và tiêu chảy có dấu hiệu của tay chân miệng nhẹ.",
+            "confidence": 74.0
         },
         {
             "id": "R68",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["mouth_ulcer", "rash", "nausea", "fever"],
+            "consequent": "severe_hand_foot_mouth_disease",
+            "explanation": "Loét miệng, phát ban, buồn nôn và sốt có dấu hiệu của tay chân miệng nặng.",
+            "confidence": 86.0
         },
         {
             "id": "R69",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["red_ear_canal", "ear_pain", "water_in_ear_sensation"],
+            "consequent": "otitis_externa",
+            "explanation": "Đỏ ống tai, đau tai và cảm giác có nước trong tai có dấu hiệu của viêm ống tai ngoài.",
+            "confidence": 74.0
         },
         {
             "id": "R70",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["orthopnea", "chest_pain", "arrhythmia"],
+            "consequent": "valvular_heart_disease",
+            "explanation": "Khó thở khi nằm, đau ngực và rối loạn nhịp tim có dấu hiệu của bệnh van tim.",
+            "confidence": 88.0
         },
         {
             "id": "R71",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["arrhythmia", "generalized_body_pain", "shortness_of_breath", "fatigue"],
+            "consequent": "myocardial_ischemia",
+            "explanation": "Rối loạn nhịp tim, đau toàn thân, khó thở và mệt mỏi có dấu hiệu của thiếu máu cơ tim.",
+            "confidence": 90.0
         },
         {
             "id": "R72",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["shortness_of_breath", "dizziness", "syncope"],
+            "consequent": "arrhythmia",
+            "explanation": "Khó thở, chóng mặt và ngất có dấu hiệu của rối loạn nhịp tim.",
+            "confidence": 86.0
         },
         {
             "id": "R73",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["fever", "rash", "conjunctival_redness"],
+            "consequent": "measles",
+            "explanation": "Sốt, phát ban và đỏ kết mạc có dấu hiệu của sởi.",
+            "confidence": 84.0
         },
         {
             "id": "R74",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["parotid_pain", "loss_of_appetite"],
+            "consequent": "mumps",
+            "explanation": "Đau tuyến mang tai và chán ăn có dấu hiệu của quai bị.",
+            "confidence": 78.0
         },
         {
             "id": "R75",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["postauricular_lymph_node_swelling", "fatigue", "nose_pain"],
+            "consequent": "rubella",
+            "explanation": "Sưng hạch sau tai, mệt mỏi và đau mũi có dấu hiệu của rubella.",
+            "confidence": 76.0
         },
         {
             "id": "R76",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["blisters", "fever", "fatigue"],
+            "consequent": "varicella",
+            "explanation": "Nổi mụn nước, sốt và mệt mỏi có dấu hiệu của thủy đậu.",
+            "confidence": 82.0
         },
         {
             "id": "R77",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["itchy_eyes", "eye_scarring", "trachoma_follicles"],
+            "consequent": "trachoma",
+            "explanation": "Ngứa mắt, sẹo mắt và nang hột có dấu hiệu của đau mắt hột.",
+            "confidence": 70.0
         },
         {
             "id": "R78",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["vomiting", "diarrhea", "dehydration", "fatigue"],
+            "consequent": "cholera",
+            "explanation": "Nôn, tiêu chảy, mất nước và mệt mỏi có dấu hiệu của tả.",
+            "confidence": 86.0
         },
         {
             "id": "R79",
-            "antecedents": [
-                
-            ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "antecedents": ["headache", "abdominal_pain", "vomiting"],
+            "consequent": "typhoid_fever",
+            "explanation": "Đau đầu, đau bụng và nôn có dấu hiệu của thương hàn.",
+            "confidence": 84.0
         },
         {
             "id": "R80",
+            "antecedents": ["jaundice", "loss_of_appetite", "dark_urine"],
+            "consequent": "hepatitis",
+            "explanation": "Vàng da, chán ăn và nước tiểu sẫm màu có dấu hiệu của viêm gan.",
+            "confidence": 90.0
+        },
+        {
+            "id": "R81",
+            "antecedents": ["fever", "rigor", "profuse_sweating"],
+            "consequent": "malaria",
+            "explanation": "Sốt, rét run và vã mồ hôi có dấu hiệu của sốt rét.",
+            "confidence": 86.0
+        },
+        {
+            "id": "R82",
+            "antecedents": ["fever", "seizure", "coma"],
+            "consequent": "japanese_encephalitis",
+            "explanation": "Sốt, co giật và hôn mê có dấu hiệu của viêm não Nhật Bản.",
+            "confidence": 92.0
+        },
+        {
+            "id": "R83",
             "antecedents": [
-                
+                "productive_cough",
+                "shortness_of_breath",
+                "nasal_polyp",
+                "excessive_sweating",
+                "abdominal_pain"
             ],
-            "consequent": "urgent_medical_attention",
-            "explanation": "",
-            "confidence": 
+            "consequent": "cystic_fibrosis",
+            "explanation": "Ho có đờm, khó thở, polyp mũi, đổ mồ hôi nhiều và đau bụng có dấu hiệu của xơ nang.",
+            "confidence": 92.0
+        },
+        {
+            "id": "R84",
+            "antecedents": [
+                "persistent_cough",
+                "chest_pain",
+                "bloody_sputum",
+                "fatigue",
+                "difficulty_swallowing"
+            ],
+            "consequent": "lung_cancer",
+            "explanation": "Ho kéo dài, đau ngực, đờm lẫn máu, mệt mỏi và khó nuốt có dấu hiệu của ung thư phổi.",
+            "confidence": 84.0
+        },
+        {
+            "id": "R85",
+            "antecedents": [
+                "heartburn",
+                "nausea",
+                "difficulty_swallowing"
+            ],
+            "consequent": "gerd",
+            "explanation": "Ợ nóng, buồn nôn và khó nuốt có dấu hiệu của trào ngược dạ dày thực quản.",
+            "confidence": 78.0
+        },
+        {
+            "id": "R86",
+            "antecedents": [
+                "abdominal_pain",
+                "diarrhea"
+            ],
+            "consequent": "ibs",
+            "explanation": "Đau bụng và tiêu chảy có dấu hiệu của hội chứng ruột kích thích.",
+            "confidence": 74.0
+        },
+        {
+            "id": "R87",
+            "antecedents": [
+                "cramping_abdominal_pain",
+                "mucus_in_stool",
+                "diarrhea",
+                "dehydration"
+            ],
+            "consequent": "colitis",
+            "explanation": "Đau quặn bụng, có chất nhầy trong phân, tiêu chảy và mất nước có dấu hiệu của viêm đại tràng.",
+            "confidence": 82.0
+        },
+        {
+            "id": "R88",
+            "antecedents": [
+                "cramping_abdominal_pain",
+                "headache",
+                "constipation"
+            ],
+            "consequent": "appendicitis",
+            "explanation": "Đau quặn bụng, đau đầu và táo bón có dấu hiệu của viêm ruột thừa.",
+            "confidence": 86.0
+        },
+        {
+            "id": "R89",
+            "antecedents": [
+                "respiratory_syndrome",
+                "viral_pattern",
+                "chills"
+            ],
+            "consequent": "influenza",
+            "explanation": "Hội chứng hô hấp, mẫu nhiễm virus và ớn lạnh có dấu hiệu của cúm.",
+            "confidence": 93.0
+        },
+        {
+            "id": "R90",
+            "antecedents": [
+                "upper_respiratory_pattern",
+                "ent_syndrome",
+                "lymph_swelling"
+            ],
+            "consequent": "common_cold",
+            "explanation": "Mẫu đường hô hấp trên, hội chứng tai mũi họng và sưng hạch có dấu hiệu của cảm lạnh.",
+            "confidence": 82.0
+        },
+        {
+            "id": "R91",
+            "antecedents": [
+                "nasal_disorder",
+                "upper_respiratory_pattern",
+                "reduced_smell"
+            ],
+            "consequent": "sinusitis",
+            "explanation": "Rối loạn mũi, mẫu đường hô hấp trên và giảm khứu giác có dấu hiệu của viêm xoang.",
+            "confidence": 88.0
+        },
+        {
+            "id": "R92",
+            "antecedents": [
+                "throat_disorder",
+                "viral_pattern",
+                "jaw_lymph_node_swelling"
+            ],
+            "consequent": "pharyngitis",
+            "explanation": "Rối loạn họng, mẫu nhiễm virus và sưng hạch góc hàm có dấu hiệu của viêm họng.",
+            "confidence": 85.0
+        },
+        {
+            "id": "R93",
+            "antecedents": [
+                "throat_disorder",
+                "hoarseness"
+            ],
+            "consequent": "laryngitis",
+            "explanation": "Rối loạn họng và khàn tiếng có dấu hiệu của viêm thanh quản.",
+            "confidence": 84.0
+        },
+        {
+            "id": "R94",
+            "antecedents": [
+                "lower_respiratory_pattern",
+                "respiratory_alert",
+                "high_fever"
+            ],
+            "consequent": "pneumonia",
+            "explanation": "Mẫu đường hô hấp dưới, cảnh báo hô hấp và sốt cao có dấu hiệu của viêm phổi.",
+            "confidence": 96.0
+        },
+        {
+            "id": "R95",
+            "antecedents": [
+                "lower_respiratory_pattern",
+                "cough",
+                "sputum"
+            ],
+            "consequent": "bronchitis",
+            "explanation": "Mẫu đường hô hấp dưới, ho và đờm có dấu hiệu của viêm phế quản.",
+            "confidence": 86.0
+        },
+        {
+            "id": "R96",
+            "antecedents": [
+                "respiratory_syndrome",
+                "lower_respiratory_pattern",
+                "wheezing"
+            ],
+            "consequent": "asthma",
+            "explanation": "Hội chứng hô hấp, mẫu đường hô hấp dưới và thở khò khè có dấu hiệu của hen suyễn.",
+            "confidence": 90.0
+        },
+        {
+            "id": "R97",
+            "antecedents": [
+                "infectious_pattern",
+                "cough",
+                "nasal_polyp"
+            ],
+            "consequent": "cystic_fibrosis",
+            "explanation": "Mẫu nhiễm trùng, ho và polyp mũi có dấu hiệu của xơ nang.",
+            "confidence": 81.0
+        },
+        {
+            "id": "R98",
+            "antecedents": [
+                "lower_respiratory_pattern",
+                "persistent_cough",
+                "shortness_of_breath"
+            ],
+            "consequent": "copd",
+            "explanation": "Mẫu đường hô hấp dưới, ho kéo dài và khó thở có dấu hiệu của bệnh phổi tắc nghẽn mạn tính.",
+            "confidence": 91.0
+        },
+        {
+            "id": "R99",
+            "antecedents": [
+                "infectious_pattern",
+                "persistent_cough",
+                "weight_loss"
+            ],
+            "consequent": "pulmonary_tuberculosis",
+            "explanation": "Mẫu nhiễm trùng, ho kéo dài và sụt cân có dấu hiệu của lao phổi.",
+            "confidence": 90.0
+        },
+        {
+            "id": "R100",
+            "antecedents": [
+                "lower_respiratory_pattern",
+                "bloody_sputum",
+                "weight_loss"
+            ],
+            "consequent": "lung_cancer",
+            "explanation": "Mẫu đường hô hấp dưới, đờm lẫn máu và sụt cân có dấu hiệu của ung thư phổi.",
+            "confidence": 88.0
+        },
+        {
+            "id": "R101",
+            "antecedents": [
+                "allergy_pattern",
+                "nasal_disorder",
+                "sneezing"
+            ],
+            "consequent": "allergic_rhinitis",
+            "explanation": "Mẫu dị ứng, rối loạn mũi và hắt hơi có dấu hiệu của viêm mũi dị ứng.",
+            "confidence": 92.0
+        },
+        {
+            "id": "R102",
+            "antecedents": [
+                "nasal_disorder",
+                "nasal_polyp"
+            ],
+            "consequent": "nasal_polyps",
+            "explanation": "Rối loạn mũi và polyp mũi có dấu hiệu của polyp mũi.",
+            "confidence": 85.0
+        },
+        {
+            "id": "R103",
+            "antecedents": [
+                "lower_digestive_pattern",
+                "hard_stool"
+            ],
+            "consequent": "constipation",
+            "explanation": "Mẫu đường tiêu hóa dưới và phân cứng có dấu hiệu của táo bón.",
+            "confidence": 80.0
+        },
+        {
+            "id": "R104",
+            "antecedents": [
+                "lower_digestive_pattern",
+                "digestive_syndrome",
+                "diarrhea"
+            ],
+            "consequent": "acute_diarrhea",
+            "explanation": "Mẫu đường tiêu hóa dưới, hội chứng tiêu hóa và tiêu chảy có dấu hiệu của tiêu chảy cấp.",
+            "confidence": 87.0
+        },
+        {
+            "id": "R105",
+            "antecedents": [
+                "upper_digestive_pattern",
+                "heartburn"
+            ],
+            "consequent": "gerd",
+            "explanation": "Mẫu đường tiêu hóa trên và ợ nóng có dấu hiệu của trào ngược dạ dày thực quản.",
+            "confidence": 89.0
+        },
+        {
+            "id": "R106",
+            "antecedents": [
+                "lower_digestive_pattern",
+                "abdominal_pain"
+            ],
+            "consequent": "ibs",
+            "explanation": "Mẫu đường tiêu hóa dưới và đau bụng có dấu hiệu của hội chứng ruột kích thích.",
+            "confidence": 82.0
+        },
+        {
+            "id": "R107",
+            "antecedents": [
+                "upper_digestive_pattern",
+                "abdominal_pain"
+            ],
+            "consequent": "gastritis",
+            "explanation": "Mẫu đường tiêu hóa trên và đau bụng có dấu hiệu của viêm dạ dày.",
+            "confidence": 87.0
+        },
+        {
+            "id": "R108",
+            "antecedents": [
+                "lower_digestive_pattern",
+                "gastrointestinal_bleeding"
+            ],
+            "consequent": "colitis",
+            "explanation": "Mẫu đường tiêu hóa dưới và xuất huyết tiêu hóa có dấu hiệu của viêm đại tràng.",
+            "confidence": 86.0
+        },
+        {
+            "id": "R109",
+            "antecedents": [
+                "upper_digestive_pattern",
+                "gastrointestinal_bleeding",
+                "abdominal_pain"
+            ],
+            "consequent": "peptic_ulcer_disease",
+            "explanation": "Mẫu đường tiêu hóa trên, xuất huyết tiêu hóa và đau bụng có dấu hiệu của viêm loét dạ dày.",
+            "confidence": 91.0
+        },
+        {
+            "id": "R110",
+            "antecedents": [
+                "gastrointestinal_bleeding",
+                "blood_in_stool"
+            ],
+            "consequent": "hemorrhoids",
+            "explanation": "Xuất huyết tiêu hóa và đi ngoài ra máu có dấu hiệu của bệnh trĩ.",
+            "confidence": 83.0
+        },
+        {
+            "id": "R111",
+            "antecedents": [
+                "lower_digestive_pattern",
+                "cramping_abdominal_pain",
+                "fever"
+            ],
+            "consequent": "appendicitis",
+            "explanation": "Mẫu đường tiêu hóa dưới, đau quặn bụng và sốt có dấu hiệu của viêm ruột thừa.",
+            "confidence": 89.0
+        },
+        {
+            "id": "R112",
+            "antecedents": [
+                "vesicular_rash",
+                "mouth_ulcer"
+            ],
+            "consequent": "light_hand_foot_mouth_disease",
+            "explanation": "Phát ban dạng mụn nước và loét miệng có dấu hiệu của tay chân miệng nhẹ.",
+            "confidence": 84.0
+        },
+        {
+            "id": "R113",
+            "antecedents": [
+                "vesicular_rash",
+                "neurological_alert",
+                "high_fever"
+            ],
+            "consequent": "severe_hand_foot_mouth_disease",
+            "explanation": "Phát ban dạng mụn nước, cảnh báo thần kinh và sốt cao có dấu hiệu của tay chân miệng nặng.",
+            "confidence": 95.0
+        },
+        {
+            "id": "R114",
+            "antecedents": [
+                "ear_disorder",
+                "ear_pain"
+            ],
+            "consequent": "otitis_externa",
+            "explanation": "Rối loạn tai và đau tai có dấu hiệu của viêm ống tai ngoài.",
+            "confidence": 82.0
+        },
+        {
+            "id": "R115",
+            "antecedents": [
+                "ear_disorder",
+                "fever",
+                "ear_pain"
+            ],
+            "consequent": "otitis_media",
+            "explanation": "Rối loạn tai, sốt và đau tai có dấu hiệu của viêm tai giữa.",
+            "confidence": 88.0
         }
     ],
     "DIAGNOSIS_METADATA": {
-        "influenza": {
-            "priority": "medium",
-            "advice": "Bạn cần nên nghỉ ngơi, uống đủ nước, theo dõi sốt và đi khám nếu triệu chứng nặng thêm."
-        },
-        "common_cold": {
-            "priority": "low",
-            "advice": "Bạn cần tiếp tục theo dõi triệu chứng, nghỉ ngơi, giữ ấm và bổ sung nước."
+        "angina": {
+            "priority": "high",
+            "advice": "ĐỘC LẬP. Đây là cảnh báo tim mạch. Gọi xe cấp cứu hoặc đi viện ngay lập tức."
         },
         "covid19_suspected": {
             "priority": "high",
             "advice": "Nên test, hạn chế tiếp xúc, theo dõi SpO2 và đi khám nếu khó thở hoặc sốt kéo dài."
         },
-        "allergic_rhinitis": {
-            "priority": "low",
-            "advice": "Tránh tác nhân dị ứng, theo dõi và cân nhắc khám chuyên khoa nếu tái phát nhiều."
-        },
-        "food_poisoning": {
-            "priority": "medium",
-            "advice": "Bù nước, theo dõi mất nước và đi khám nếu nôn nhiều, sốt cao hoặc tiêu chảy kéo dài."
+        "dengue_fever": {
+            "priority": "high",
+            "advice": "Sốt xuất huyết cần khám ngay. Uống nước, kiểm tra tiểu cầu và theo dõi sốt."
         },
         "measles_suspected": {
             "priority": "high",
             "advice": "Cần khám để đánh giá nguyên nhân phát ban, đặc biệt khi sốt cao hoặc mệt nhiều."
         },
-        "urgent_medical_attention": {
-            "priority": "high",
-            "advice": "Có dấu hiệu cảnh báo. Nên đến cơ sở y tế hoặc gọi hỗ trợ y tế ngay."
-        },
-        "bronchitis": {
-            "priority": "medium",
-            "advice": "Cần khám chuyên khoa hô hấp. Tránh khói, hít nước nóng và theo dõi sốt."
-        },
         "pneumonia": {
             "priority": "high",
             "advice": "Cần đi khám sớm hoặc vào viện. Viêm phổi là bệnh lý nặng cần điều trị kháng sinh."
+        },
+        "urgent_medical_attention": {
+            "priority": "high",
+            "advice": "Có dấu hiệu cảnh báo. Nên đến cơ sở y tế hoặc gọi hỗ trợ y tế ngay."
         },
         "asthma": {
             "priority": "medium",
             "advice": "Nên khám bác sĩ hô hấp. Tránh tác nhân kích thích, dùng inhaler nếu có."
         },
-        "sinusitis": {
+        "bronchitis": {
+            "priority": "medium",
+            "advice": "Cần khám chuyên khoa hô hấp. Tránh khói, hít nước nóng và theo dõi sốt."
+        },
+        "common_cold": {
             "priority": "low",
-            "advice": "Xông hơi mũi, hít nước nóng và khám nếu triệu chứng kéo dài hơn 2 tuần."
+            "advice": "Bạn cần tiếp tục theo dõi triệu chứng, nghỉ ngơi, giữ ấm và bổ sung nước."
+        },
+        "food_poisoning": {
+            "priority": "medium",
+            "advice": "Bù nước, theo dõi mất nước và đi khám nếu nôn nhiều, sốt cao hoặc tiêu chảy kéo dài."
+        },
+        "gastroenteritis": {
+            "priority": "medium",
+            "advice": "Bù nước từng chút, ăn nhạt, tránh sữa và đi khám nếu mất nước hoặc sốt cao."
+        },
+        "influenza": {
+            "priority": "medium",
+            "advice": "Bạn cần nên nghỉ ngơi, uống đủ nước, theo dõi sốt và đi khám nếu triệu chứng nặng thêm."
         },
         "otitis_media": {
             "priority": "medium",
@@ -1206,17 +2235,141 @@
             "priority": "medium",
             "advice": "Uống nước ấm, dùng lozenges, và khám để xác định nguyên nhân virus hay vi khuẩn."
         },
-        "gastroenteritis": {
+        "allergic_rhinitis": {
+            "priority": "low",
+            "advice": "Tránh tác nhân dị ứng, theo dõi và cân nhắc khám chuyên khoa nếu tái phát nhiều."
+        },
+        "sinusitis": {
+            "priority": "low",
+            "advice": "Xông hơi mũi, hít nước nóng và khám nếu triệu chứng kéo dài hơn 2 tuần."
+        },
+        "laryngitis": {
+            "priority": "low",
+            "advice": "Tránh hắng giọng, tránh đồ ăn, thức uống quá đậm vị."
+        },
+        "copd": {
+            "priority": "high",
+            "advice": "Cần đi khám bác sĩ để có phác đồ điều trị hiệu quả."
+        },
+        "pulmonary_tuberculosis": {
+            "priority": "high",
+            "advice": "Cần có lối sống lành mạnh hơn, đồng thời có các biện pháp cách ly, phòng ngừa tương ứng, thích hợp."
+        },
+        "lung_cancer": {
+            "priority": "high",
+            "advice": "Cần đi khám khẩn cấp, tránh các khu vực có khói, tránh sử dụng thuốc không theo chỉ định."
+        },
+        "cystic_fibrosis": {
+            "priority": "high",
+            "advice": "Cần khám bác sĩ để có phác đồ điều trị hiệu quả."
+        },
+        "nasal_polyps": {
+            "priority": "low",
+            "advice": "Tránh xa chất kích thích, giữ gìn vệ sinh mũi và đảm bảo độ ẩm môi trường xung quanh."
+        },
+        "otitis_externa": {
             "priority": "medium",
-            "advice": "Bù nước từng chút, ăn nhạt, tránh sữa và đi khám nếu mất nước hoặc sốt cao."
+            "advice": "Không lạm dụng bông tai, có thể làm khô tai bằng cách dùng máy sấy, tuy nhiên nên tới bác sĩ để theo dõi."
         },
-        "dengue_fever": {
-            "priority": "high",
-            "advice": "Sốt xuất huyết cần khám ngay. Uống nước, kiểm tra tiểu cầu và theo dõi sốt."
+        "constipation": {
+            "priority": "low",
+            "advice": "Bổ sung thêm chất xơ, nước, đi vệ sinh ngay khi có dấu hiệu."
         },
-        "angina": {
+        "acute_diarrhea": {
+            "priority": "medium",
+            "advice": "Cần ăn chín uống sôi, bù nước, bổ sung lợi khuẩn."
+        },
+        "gerd": {
+            "priority": "low",
+            "advice": "Tránh đồ ăn, đồ uống chua cay, nên mua thuốc điều tiết axit dạ dày hoặc thậm chí đi khám trong trường hợp bệnh lâu ngày."
+        },
+        "ibs": {
+            "priority": "low",
+            "advice": "Cần bù thêm nước, nghỉ ngơi hợp lý, tránh thực phẩm khó tiêu hoặc để lâu."
+        },
+        "gastritis": {
+            "priority": "medium",
+            "advice": "Nên có sự giám sát và lời khuyên của bác sĩ cho việc điều trị và kê đơn thuốc."
+        },
+        "colitis": {
+            "priority": "medium",
+            "advice": "Kiểm soát các triệu chứng, nên có sự thăm khám của bác sĩ."
+        },
+        "peptic_ulcer_disease": {
             "priority": "high",
-            "advice": "ĐỘC LẬP. Đây là cảnh báo tim mạch. Gọi xe cấp cứu hoặc đi viện ngay lập tức."
+            "advice": "Bổ sung nhiều vitamin, chất xơ, lợi khuẩn, nên thăm khám bác sĩ trong trường hợp bệnh trở nặng."
+        },
+        "appendicitis": {
+            "priority": "high",
+            "advice": "Cần có sự can thiệp khẩn cấp từ bác sĩ."
+        },
+        "hemorrhoids": {
+            "priority": "low",
+            "advice": "Bổ sung nhiều chất xơ, uống đủ nước, nên có sự can thiệp sớm của bác sĩ."
+        },
+        "valvular_heart_disease": {
+            "priority": "high",
+            "advice": "Cần có sự thăm khám khẩn cấp."
+        },
+        "myocardial_ischemia": {
+            "priority": "high",
+            "advice": "Cần có sự thăm khám khẩn cấp."
+        },
+        "arrhythmia": {
+            "priority": "high",
+            "advice": "Cần có sự thăm khám khẩn cấp."
+        },
+        "measles": {
+            "priority": "medium",
+            "advice": "Cần cách ly khi bị bệnh, cần thăm khám bác sĩ khi có các dấu hiệu bệnh."
+        },
+        "mumps": {
+            "priority": "medium",
+            "advice": "Cần cách ly khi cần thiết, chú ý nghỉ ngơi hợp lý và chườm lạnh khi đau."
+        },
+        "varicella": {
+            "priority": "medium",
+            "advice": "Cần cách ly bệnh nhân, theo dõi tình trạng bệnh khi cần thiết, chú ý vệ sinh cá nhân."
+        },
+        "trachoma": {
+            "priority": "low",
+            "advice": "Cần mua thuốc kháng sinh và thuốc bôi để điều trị và giảm đau."
+        },
+        "cholera": {
+            "priority": "medium",
+            "advice": "Ăn chín uống sôi, đi khám nếu bệnh trở nặng."
+        },
+        "typhoid_fever": {
+            "priority": "high",
+            "advice": "Ăn chín uống sôi, đi khám nếu bệnh trở nặng."
+        },
+        "hepatitis": {
+            "priority": "medium",
+            "advice": "Nên đi khám bác sĩ để lên phác đồ điều trị nếu cần thiết."
+        },
+        "malaria": {
+            "priority": "medium",
+            "advice": "Bắc màn khi ngủ, diệt muỗi, tới khám bác sĩ khi cần thiết."
+        },
+        "japanese_encephalitis": {
+            "priority": "high",
+            "advice": "Cần nhập viện khẩn cấp."
+        },
+        "dehydration": {
+            "priority": "low",
+            "advice": "Bù thêm nước ngay, nên có nước bổ sung chất khoáng."
+        },
+        "rubella": {
+            "priority": "medium",
+            "advice": "Cần cách ly, có sự thăm khám của bác sĩ."
+        },
+        "light_hand_foot_mouth_disease": {
+            "priority": "low",
+            "advice": "Bù nước, bù lợi khuẩn, cần theo dõi thêm."
+        },
+        "severe_hand_foot_mouth_disease": {
+            "priority": "high",
+            "advice": "Cần có sự thăm khám của bác sĩ để lên phác đồ phù hợp với bệnh."
         }
     },
     "QUICK_FACT_KEYS": [
@@ -1231,6 +2384,32 @@
         "diarrhea",
         "abdominal_pain",
         "chest_pain",
-        "nausea"
+        "nausea",
+        "bloody_sputum",
+        "orthopnea",
+        "worsening_shortness_of_breath",
+        "cramping_abdominal_pain",
+        "belching",
+        "anal_swelling",
+        "mouth_ulcer",
+        "lower_abdominal_pain",
+        "syncope",
+        "seizure",
+        "coma",
+        "generalized_body_pain",
+        "dark_urine",
+        "jaundice",
+        "conjunctival_redness",
+        "trachoma_follicles",
+        "eye_scarring",
+        "nose_pain",
+        "postauricular_lymph_node_swelling",
+        "arrhythmia",
+        "blisters",
+        "rigor",
+        "profuse_sweating",
+        "dehydration",
+        "weight_loss",
+        "ear_pain"
     ]
 }
